@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>交流会 レヴ×ラムダ in 岡山城｜2026.12.06</title>
+<meta name="description" content="年末特別回。AI Salon Lev × 都市伝説カフェ Λ。岡山城 天守閣で、未来も伝説も語り合う一夜。2026年12月6日（日）18:30〜20:30。">
+<meta property="og:title" content="交流会 レヴ×ラムダ in 岡山城">
+<meta property="og:description" content="語ろう。未来も、伝説も。2026.12.06 SUN／岡山城 天守閣">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aisalonlev.com/lev-lambda">
+<meta property="og:image" content="https://aisalonlev.com/lev-lambda-ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="交流会 レヴ×ラムダ in 岡山城">
+<meta name="twitter:description" content="語ろう。未来も、伝説も。2026.12.06 SUN／岡山城 天守閣">
+<meta name="twitter:image" content="https://aisalonlev.com/lev-lambda-ogp.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--hero:url("images/lev-lambda-hero.jpg");--hero-m:url("images/lev-lambda-hero-mobile.jpg");}
+:root{
+  --ink:#0A0E1A;
+  --ink-2:#0d1322;
+  --ember:#F4A14A;
+  --ember-soft:#FFC074;
+  --fire-deep:#B23A0E;
+  --cyber:#4DA3FF;
+  --cyber-soft:#7CC4FF;
+  --cyber-deep:#16306e;
+  --moon:#F4EFE6;
+  --dim:#A4ADC2;
+  --line:rgba(244,239,230,.14);
+  --panel:rgba(13,19,34,.62);
+  --mincho:"Shippori Mincho",serif;
+  --gothic:"Zen Kaku Gothic New",sans-serif;
+  --tech:"Space Grotesk","Zen Kaku Gothic New",sans-serif;
+  --maxw:1080px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--gothic);
+  color:var(--moon);
+  background:var(--ink);
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ── 全面の夜空背景（橙←→青、中央は自然に混ざる。光の柱なし） ── */
+#bg{position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(120% 90% at 0% 40%, rgba(178,58,14,.34) 0%, rgba(178,58,14,0) 46%),
+    radial-gradient(120% 90% at 100% 55%, rgba(22,48,110,.42) 0%, rgba(22,48,110,0) 48%),
+    linear-gradient(100deg,#150e0c 0%, #0b0c14 46%, #0a0f1f 54%, #0a1428 100%);
+}
+#bg::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(140% 120% at 50% -10%, transparent 60%, rgba(0,0,0,.55) 100%);}
+#particles{position:fixed;inset:0;z-index:-1;pointer-events:none}
+
+/* ── 継ぎ目（signature）：橙→青のグラデ細線 ── */
+.seam{display:block;width:1px;height:54px;margin:0 auto;
+  background:linear-gradient(var(--ember-soft),var(--cyber-soft));
+  box-shadow:0 0 14px rgba(255,192,116,.5),0 0 14px rgba(124,196,255,.5);}
+.reveal .seam{transform:scaleY(0);transform-origin:top;transition:transform .7s .15s ease}
+.reveal.in .seam{transform:scaleY(1)}
+
+/* ── ヘッダー ── */
+header{position:fixed;top:0;left:0;right:0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(18px,4vw,40px);
+  background:rgba(10,14,26,.92);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  transform:translateY(-115%);transition:transform .45s ease;}
+header.show{transform:none}
+.brand{font-family:var(--tech);font-weight:600;letter-spacing:.06em;
+  font-size:15px;display:flex;align-items:center;gap:.5em;color:var(--moon);text-decoration:none}
+.brand b{font-weight:700}
+.brand .x{color:var(--dim);font-weight:400}
+.brand .amber{color:var(--ember-soft)}
+.brand .blue{color:var(--cyber-soft)}
+.nav-cta{font-family:var(--tech);font-weight:600;font-size:13.5px;letter-spacing:.04em;
+  text-decoration:none;color:var(--ink);padding:9px 18px;border-radius:999px;
+  background:linear-gradient(95deg,var(--ember-soft),#fff 48%,var(--cyber-soft));
+  box-shadow:0 4px 18px rgba(124,196,255,.25),0 4px 18px rgba(255,192,116,.2);
+  transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 8px 26px rgba(124,196,255,.4),0 8px 26px rgba(255,192,116,.32)}
+
+/* ── 共通セクション ── */
+section{position:relative;padding:clamp(72px,11vw,128px) clamp(20px,5vw,40px)}
+.wrap{max-width:var(--maxw);margin:0 auto}
+.eyebrow{font-family:var(--tech);font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--dim);display:flex;align-items:center;gap:.8em;margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:1px;
+  background:linear-gradient(90deg,var(--ember),var(--cyber))}
+.eyebrow.center{justify-content:center}
+.eyebrow.center::after{content:"";width:26px;height:1px;
+  background:linear-gradient(90deg,var(--cyber),var(--ember))}
+h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
+  font-size:clamp(26px,5vw,42px);letter-spacing:.02em}
+
+/* ── HERO ── */
+#hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
+  align-items:center;text-align:center;padding-bottom:clamp(48px,9vh,96px);overflow:hidden}
+#hero .photo{position:absolute;inset:0;z-index:-1;
+  background-image:var(--hero);background-size:cover;background-position:center;}
+#hero .photo::after{content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(10,14,26,.46) 0%,rgba(10,14,26,0) 26%,rgba(10,14,26,0) 52%,rgba(10,14,26,.72) 100%),
+    radial-gradient(80% 60% at 50% 88%, rgba(10,14,26,.6), transparent 70%);}
+.hero-tag{font-family:var(--tech);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--ember-soft);margin-bottom:22px;opacity:0;animation:rise .9s .15s forwards}
+.hero-tag .d{color:var(--dim)}
+.hero-tag .b{color:var(--cyber-soft)}
+.catch{font-family:var(--mincho);font-weight:800;
+  font-size:clamp(34px,8.5vw,76px);line-height:1.28;letter-spacing:.04em;
+  position:relative;left:.18em;
+  text-shadow:0 2px 40px rgba(0,0,0,.6);opacity:0;animation:rise 1s .3s forwards}
+.catch .f{color:var(--cyber-soft);white-space:nowrap}
+.catch .l{color:var(--ember-soft);white-space:nowrap}
+.hero-title{font-family:var(--gothic);font-weight:500;font-size:clamp(15px,2.6vw,19px);
+  margin-top:24px;color:var(--moon);letter-spacing:.04em;opacity:0;animation:rise 1s .5s forwards}
+.hero-meta{font-family:var(--tech);font-weight:500;font-size:clamp(13px,2.4vw,16px);
+  margin-top:12px;color:var(--dim);letter-spacing:.06em;display:flex;gap:.7em;flex-wrap:wrap;justify-content:center;
+  opacity:0;animation:rise 1s .62s forwards}
+.hero-meta .sep{color:rgba(164,173,194,.45)}
+.hero-meta .hl{color:var(--moon)}
+.hero-cta{margin-top:34px;opacity:0;animation:rise 1s .78s forwards}
+.btn{position:relative;overflow:hidden;font-family:var(--tech);font-weight:700;letter-spacing:.04em;font-size:16px;
+  display:inline-flex;align-items:center;gap:.6em;text-decoration:none;color:var(--ink);
+  padding:16px 36px;border-radius:999px;
+  background:linear-gradient(95deg,var(--ember-soft),#fff 50%,var(--cyber-soft));
+  box-shadow:0 6px 30px rgba(255,192,116,.3),0 6px 30px rgba(124,196,255,.34);
+  transition:transform .2s,box-shadow .2s}
+.btn::before{content:"";position:absolute;top:0;left:0;width:45%;height:100%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);
+  transform:translateX(-260%) skewX(-18deg);transition:transform .7s ease}
+.btn:hover::before{transform:translateX(420%) skewX(-18deg)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,192,116,.42),0 12px 40px rgba(124,196,255,.46)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+
+/* ── CONCEPT ── */
+#concept{text-align:center}
+#concept .lead{font-family:var(--mincho);font-weight:500;
+  font-size:clamp(18px,2.9vw,23px);line-height:2.15;letter-spacing:.03em;
+  max-width:860px;margin:34px auto 0}
+#concept .lead em{font-style:normal;color:var(--cyber-soft)}
+#concept .lead em.b{color:var(--ember-soft)}
+
+/* ── OVERVIEW ── */
+.cards{margin-top:42px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ov-card{padding:clamp(24px,3.2vw,34px);border:1px solid var(--line);border-radius:16px;
+  background:var(--panel);transition:border-color .3s,transform .3s}
+.ov-card:hover{border-color:rgba(244,239,230,.26);transform:translateY(-2px)}
+.ov-card .k{font-family:var(--tech);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.ov-card .v{font-size:clamp(21px,3vw,28px);font-weight:700;line-height:1.5;letter-spacing:.02em}
+.ov-card .s{font-size:14px;color:var(--dim);margin-top:10px;line-height:1.75}
+.ov-cta{margin-top:44px;text-align:center}
+
+/* ── HOSTS（二項対立を実体化） ── */
+#hosts .pair{margin-top:46px;display:grid;grid-template-columns:1fr 1px 1fr;gap:0;align-items:stretch}
+.host{padding:clamp(26px,4vw,40px) clamp(20px,3vw,38px)}
+.host .role{font-family:var(--tech);font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;margin-bottom:14px}
+.host .mark{font-family:var(--mincho);font-weight:700;font-size:clamp(24px,4vw,32px);margin-bottom:4px}
+.host .sub{font-family:var(--tech);font-size:12.5px;letter-spacing:.06em;color:var(--dim);margin-bottom:18px}
+.host p{font-size:15px;color:#e7e3d9;line-height:2}
+.host.lambda{text-align:right}
+.host.lambda .role,.host.lambda .mark{color:var(--ember-soft)}
+.host.lambda .role{justify-content:flex-end}
+.host.lev .role,.host.lev .mark{color:var(--cyber-soft)}
+.divider-seam{background:linear-gradient(var(--ember-soft),var(--cyber-soft));
+  box-shadow:0 0 16px rgba(255,192,116,.4),0 0 16px rgba(124,196,255,.4)}
+
+/* ── RULES ── */
+#rules .list{margin-top:42px;display:grid;gap:14px}
+.rule{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+  padding:26px clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:14px;
+  background:var(--panel);transition:border-color .3s,transform .3s}
+.rule:hover{border-color:rgba(244,239,230,.28);transform:translateY(-2px)}
+.rule .no{font-family:var(--tech);font-weight:700;font-size:30px;line-height:1;
+  background:linear-gradient(135deg,var(--ember-soft),var(--cyber-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.rule h3{font-family:var(--mincho);font-weight:700;font-size:19px;margin-bottom:6px;letter-spacing:.02em}
+.rule p{font-size:14.5px;color:var(--dim);line-height:1.85}
+.rule .ps{display:block;margin-top:12px;font-size:12.5px;color:rgba(164,173,194,.85);line-height:1.7}
+
+/* ── FLOW ── */
+.steps{margin-top:46px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{position:relative;padding:clamp(26px,3vw,34px);border:1px solid var(--line);
+  border-radius:16px;background:var(--panel);text-align:center}
+.step-no{width:54px;height:54px;margin:0 auto 18px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(244,239,230,.22);background:rgba(13,19,34,.5);
+  font-family:var(--tech);font-weight:700;font-size:20px;line-height:1}
+.step-no span{background:linear-gradient(135deg,var(--ember-soft),var(--cyber-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-family:var(--mincho);font-weight:700;font-size:18px;margin-bottom:10px;letter-spacing:.02em}
+.step p{font-size:14px;color:var(--dim);line-height:1.9}
+.step:not(:last-child)::after{content:"→";position:absolute;right:-22px;top:50%;transform:translateY(-50%);
+  font-family:var(--tech);font-size:28px;font-weight:700;line-height:1;z-index:3;
+  background:linear-gradient(90deg,var(--ember-soft),var(--cyber-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ── WELCOME（1メイン宣言 + 3小カード）── */
+#welcome{text-align:center}
+#welcome h2{position:relative}
+#welcome .welcome-cards{margin-top:52px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:left}
+.welcome-card{padding:clamp(24px,3vw,30px) clamp(22px,2.6vw,26px);
+  border:1px solid var(--line);border-radius:14px;background:var(--panel);
+  transition:border-color .3s,transform .3s;position:relative;overflow:hidden}
+.welcome-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--ember-soft),var(--cyber-soft));
+  opacity:.55;transition:opacity .3s}
+.welcome-card:hover{border-color:rgba(244,239,230,.26);transform:translateY(-2px)}
+.welcome-card:hover::before{opacity:1}
+.welcome-card .key{font-family:var(--mincho);font-weight:700;
+  font-size:clamp(18px,2.3vw,21px);line-height:1.45;letter-spacing:.02em;
+  background:linear-gradient(135deg,var(--ember-soft),var(--cyber-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  margin-bottom:14px}
+.welcome-card p:not(.key){font-size:14.5px;color:#e7e3d9;line-height:1.95}
+
+/* ── TARGET（こんな方におすすめ）── */
+#target .grid{margin-top:42px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.target-item{display:flex;align-items:flex-start;gap:14px;
+  padding:18px clamp(18px,2.6vw,24px);border:1px solid var(--line);border-radius:12px;
+  background:var(--panel);transition:border-color .3s,transform .3s}
+.target-item:hover{border-color:rgba(244,239,230,.26);transform:translateY(-2px)}
+.target-item .ic{flex-shrink:0;width:22px;height:22px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin-top:2px;
+  background:linear-gradient(135deg,var(--ember-soft),var(--cyber-soft));
+  font-family:var(--tech);font-weight:700;font-size:13px;color:var(--ink)}
+.target-item p{font-size:15px;line-height:1.75;color:#e7e3d9}
+
+/* ── PROGRAM（当日の内容）── */
+#program{text-align:left}
+#program .program-body{margin-top:42px;max-width:820px;margin-left:auto;margin-right:auto;
+  padding:clamp(28px,4vw,40px);border:1px solid var(--line);border-radius:18px;
+  background:var(--panel);position:relative;overflow:hidden}
+#program .program-body::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;
+  background:linear-gradient(180deg,var(--ember-soft),var(--cyber-soft));
+  box-shadow:0 0 14px rgba(255,192,116,.4),0 0 14px rgba(124,196,255,.4)}
+#program p{font-size:15.5px;line-height:2.05;color:#e7e3d9;margin-top:1.4em}
+#program p:first-child{margin-top:0}
+#program .pick{font-family:var(--mincho);font-weight:600;
+  font-size:clamp(17px,2.4vw,20px);color:var(--moon);letter-spacing:.02em}
+#program .pick em{font-style:normal;background:linear-gradient(135deg,var(--ember-soft),var(--cyber-soft));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ── FAQ ── */
+.faqs{margin-top:42px;display:grid;gap:12px}
+.faq{border:1px solid var(--line);border-radius:14px;background:var(--panel);transition:border-color .3s}
+.faq.open{border-color:rgba(244,239,230,.24)}
+.faq-q{width:100%;background:none;border:0;cursor:pointer;text-align:left;
+  padding:22px clamp(20px,3vw,28px);display:flex;justify-content:space-between;align-items:center;gap:16px;
+  font-family:var(--gothic);font-weight:500;font-size:clamp(15px,2.4vw,17px);color:var(--moon);transition:color .2s}
+.faq-q:hover{color:var(--cyber-soft)}
+.faq-ic{position:relative;width:18px;height:18px;flex-shrink:0}
+.faq-ic::before,.faq-ic::after{content:"";position:absolute;left:50%;top:50%;
+  width:16px;height:2px;border-radius:2px;background:var(--cyber-soft);
+  transform:translate(-50%,-50%);transition:transform .3s ease}
+.faq-ic::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq.open .faq-ic::after{transform:translate(-50%,-50%) rotate(0deg)}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .32s ease}
+.faq.open .faq-a{grid-template-rows:1fr}
+.faq-a-in{overflow:hidden}
+.faq-a-in p{color:var(--dim);font-size:14.5px;line-height:1.95;padding:0 clamp(20px,3vw,28px) 24px}
+
+/* ── JOIN ── */
+#join{text-align:center}
+#join .note{color:var(--dim);font-size:15px;margin-top:18px}
+#join .cta-wrap{margin-top:36px}
+#join .seats{font-family:var(--tech);font-size:13px;letter-spacing:.06em;color:var(--ember-soft);margin-top:22px}
+#join .contact{margin-top:26px;font-size:14px;color:var(--dim)}
+#join .contact a{color:var(--cyber-soft);text-decoration:none;border-bottom:1px solid rgba(124,196,255,.4)}
+#join .contact a:hover{border-bottom-color:var(--cyber-soft)}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--line);padding:46px clamp(20px,5vw,40px);text-align:center}
+footer .back{font-family:var(--tech);font-size:13.5px;letter-spacing:.04em;color:var(--moon);
+  text-decoration:none;display:inline-flex;align-items:center;gap:.5em}
+footer .back:hover{color:var(--cyber-soft)}
+footer .arr{transform:rotate(180deg)}
+footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:var(--dim);margin-top:18px}
+
+/* ── reveal ── */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* ── responsive ── */
+@media(max-width:720px){
+  .nav-cta{padding:8px 14px;font-size:12.5px}
+  .cards{grid-template-columns:1fr}
+  #hero .photo{background-image:var(--hero-m)}
+  #hosts .pair{grid-template-columns:1fr;gap:0}
+  #hosts .divider-seam{height:1px;width:100%;
+    background:linear-gradient(90deg,var(--ember-soft),var(--cyber-soft))}
+  .host.lambda{text-align:left}
+  .host.lambda .role{justify-content:flex-start}
+  .rule{grid-template-columns:1fr;gap:10px}
+  .steps{grid-template-columns:1fr;gap:34px}
+  .step:not(:last-child)::after{content:"↓";right:auto;left:50%;transform:translateX(-50%);top:auto;bottom:-32px}
+  #target .grid{grid-template-columns:1fr}
+  #welcome .welcome-cards{grid-template-columns:1fr;gap:12px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .catch,.hero-title,.hero-meta{opacity:1}
+  .reveal{opacity:1;transform:none}
+  .reveal .seam{transform:none}
+  .faq-a,.faq-ic::before,.faq-ic::after,.btn::before{transition:none}
+}
+:focus-visible{outline:2px solid var(--cyber-soft);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<canvas id="particles"></canvas>
+
+<header id="hd">
+  <a class="brand" href="#hero"><b class="amber">Λ</b> <span class="x">×</span> <b class="blue">LEV</b></a>
+  <a class="nav-cta" href="#join" data-apply>参加を申し込む</a>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="photo"></div>
+  <h1 class="catch">語ろう。<span class="f">未来</span>も、<span class="l">伝説</span>も。</h1>
+  <p class="hero-title">交流会　レヴ×ラムダ　in 岡山城</p>
+  <p class="hero-meta">
+    <span class="hl">2026.12.06 SUN</span><span class="sep">/</span>
+    <span>18:30 – 20:30</span><span class="sep">/</span>
+    <span>岡山城 天守閣</span>
+  </p>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept">
+  <div class="wrap reveal">
+    <span class="seam"></span>
+    <p class="eyebrow center">Concept</p>
+    <h2>AIや都市伝説が<br>好きな方へ。</h2>
+    <p class="lead">
+      岡山城の夜に、<br>
+      少し<em class="b">不思議</em>で少し<em>未来的</em>な<br>
+      交流会を開催します。<br><br>
+      AIをテーマにした交流コミュニティ<br>
+      「<em>レヴ</em>」と、<br>
+      都市伝説・不思議な話を楽しむ交流会<br>
+      「<em class="b">ラムダ</em>」が、<br>
+      岡山城で一夜限りの<br>
+      コラボイベントを開催します。<br><br>
+      AI、都市伝説、歴史、テクノロジー、<br>
+      これからの生き方。<br>
+      普段なかなか話せないテーマを、<br>
+      岡山城という特別な場所で<br>
+      気軽に語り合う交流会です。
+    </p>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section id="welcome">
+  <div class="wrap reveal">
+    <p class="eyebrow center">Welcome</p>
+    <h2>専門知識は、<br>必要ありません。</h2>
+    <div class="welcome-cards">
+      <div class="welcome-card">
+        <p class="key">どんな方も、<br>歓迎です。</p>
+        <p>AIに詳しい方はもちろん、最近少し気になっている方、都市伝説や不思議な話が好きな方、人と話すきっかけがほしい方も歓迎です。</p>
+      </div>
+      <div class="welcome-card">
+        <p class="key">聞くだけでも、<br>大丈夫。</p>
+        <p>「話すのが得意じゃない」という方も大丈夫。聞くだけの参加でも、雰囲気を楽しむだけでも構いません。</p>
+      </div>
+      <div class="welcome-card">
+        <p class="key">否定しない、<br>一夜に。</p>
+        <p>未来の話も、不思議な話も、否定せずに楽しめる場にしたいと思っています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="wrap reveal">
+    <p class="eyebrow">Overview</p>
+    <h2>開催概要</h2>
+    <div class="cards">
+      <div class="ov-card"><p class="k">Date</p><p class="v">2026年12月6日（日）</p><p class="s">18:30 〜 20:30</p></div>
+      <div class="ov-card"><p class="k">Place</p><p class="v">岡山城 天守閣</p><p class="s">岡山県岡山市北区丸の内2-3-1</p></div>
+      <div class="ov-card"><p class="k">Fee</p><p class="v">3,000円</p><p class="s">※ 年末特別回のため、全員一律（学割なし）</p></div>
+      <div class="ov-card"><p class="k">Capacity</p><p class="v">100名</p><p class="s">先着順・定員に達し次第しめ切り</p></div>
+    </div>
+    <div class="ov-cta"><a class="btn" href="#" data-apply>参加を申し込む <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- HOSTS -->
+<section id="hosts">
+  <div class="wrap reveal">
+    <p class="eyebrow">Who's hosting</p>
+    <h2>ふたつの場所が、ひとつに。</h2>
+    <div class="pair">
+      <div class="host lambda">
+        <p class="role">Legends</p>
+        <p class="mark">都市伝説カフェ Λ</p>
+        <p class="sub">LAMBDA</p>
+        <p>都市伝説や未解明の謎、ちょっと不思議な話を、都市伝説好き同士で楽しむ交流会。本当かどうかより、興味深い話を共有する場です。</p>
+      </div>
+      <div class="divider-seam"></div>
+      <div class="host lev">
+        <p class="role">Future</p>
+        <p class="mark">AI Salon Lev</p>
+        <p class="sub">LEV</p>
+        <p>AIニュースやツールを、初心者でも安心して話せる岡山のコミュニティ。知識を競わず、一緒に試しながら少しずつ慣れていく場です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARGET -->
+<section id="target">
+  <div class="wrap reveal">
+    <p class="eyebrow">For you</p>
+    <h2>こんな方に、おすすめ。</h2>
+    <div class="grid">
+      <div class="target-item"><span class="ic">✓</span><p>AIに興味がある方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>都市伝説や不思議な話が好きな方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>岡山で新しい交流の場を探している方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>レヴやラムダの活動が気になっている方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>普段なかなか話せないテーマを語りたい方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>聞き専でも参加できるイベントを探している方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>興味はあるけど、交流会に行ったことがない方</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="wrap reveal">
+    <p class="eyebrow">Program</p>
+    <h2>当日の、内容。</h2>
+    <div class="program-body">
+      <p class="pick">当日は、<em>AIや都市伝説</em>をテーマにしながら、参加者同士で気軽に交流できる時間を予定しています。</p>
+      <p>難しい勉強会やセミナーではなく、<strong style="color:var(--moon);font-weight:700">会話を楽しむ交流会</strong>です。初めての方でも参加しやすい雰囲気づくりを大切にします。</p>
+      <p>また、当日は参加者同士の交流が生まれやすくなるような<strong style="color:var(--ember-soft);font-weight:600">体験型のコンテンツ</strong>も予定しています。詳細は当日のお楽しみですが、ひとりで参加する方でも自然に会話へ入りやすい内容にする予定です。</p>
+    </div>
+  </div>
+</section>
+
+<!-- RULES -->
+<section id="rules">
+  <div class="wrap reveal">
+    <p class="eyebrow">House rules</p>
+    <h2>参加にあたっての、お願い。</h2>
+    <div class="list">
+      <div class="rule"><span class="no">01</span><div>
+        <h3>相手の話を否定しない</h3>
+        <p>安心して話せる場づくりに、ご協力ください。どんな説も、まずは「面白い」から。</p></div></div>
+      <div class="rule"><span class="no">02</span><div>
+        <h3>勧誘・営業はご遠慮を</h3>
+        <p>ビジネスへの勧誘、宗教・マルチなどの営業、その他の迷惑行為はお控えください。</p></div></div>
+      <div class="rule"><span class="no">03</span><div>
+        <h3>無断の撮影・録音はNG</h3>
+        <p>本人の許可なく、他の参加者を撮影・録音することはお控えください。</p></div></div>
+      <div class="rule"><span class="no">04</span><div>
+        <h3>距離感とマナーを大切に</h3>
+        <p>お互いが気持ちよく過ごせるよう、距離感やマナーへのご配慮をお願いします。</p>
+        <span class="ps">※ 気になる行為があった際は、運営からお声がけする場合があります。</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="wrap reveal">
+    <p class="eyebrow">How to join</p>
+    <h2>参加までの、3ステップ。</h2>
+    <div class="steps">
+      <div class="step"><div class="step-no"><span>01</span></div>
+        <h3>Peatixで申し込み</h3>
+        <p>Peatixのイベントページからチケットを購入します（事前決済）。</p></div>
+      <div class="step"><div class="step-no"><span>02</span></div>
+        <h3>チケットを受け取る</h3>
+        <p>購入後、Peatixからチケットと当日のご案内が届きます。</p></div>
+      <div class="step"><div class="step-no"><span>03</span></div>
+        <h3>交流会に参加</h3>
+        <p>当日、岡山城・天守閣でお会いしましょう。チケットは画面提示でOKです。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap reveal">
+    <p class="eyebrow">FAQ</p>
+    <h2>よくある質問。</h2>
+    <div class="faqs">
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>1人でも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>もちろんです。お一人での参加が大半なので、初めての方も気軽にお越しください。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>県外からでも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>大歓迎です。岡山城・天守閣での開催なので、旅行や観光とあわせてぜひ。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>AIも都市伝説も詳しくないのですが、大丈夫ですか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>問題ありません。「詳しくないけど興味がある」という方こそ歓迎です。聞くだけの参加でも大丈夫です。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>参加費の支払い方法は？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>お申し込みはPeatixでの事前決済です。クレジットカード・コンビニ払いなどがご利用いただけます。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>キャンセル・返金はできますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>2026年11月29日（日）23:59までにご連絡いただいた場合のみ、キャンセル・返金に対応いたします。11月30日（月）以降のキャンセルは、準備・運営の都合上、返金対応はできません。なお、主催者都合でイベントが中止となった場合は返金対応を行います。<br>※Peatixの仕様上、お支払い方法や返金タイミングによっては、返金手数料が発生する場合があります。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="wrap reveal">
+    <span class="seam"></span>
+    <p class="eyebrow center">Join</p>
+    <h2>AIや都市伝説好きな方、<br>ぜひお待ちしてます。</h2>
+    <div class="cta-wrap"><a class="btn" href="#" data-apply>参加を申し込む <span class="arr">→</span></a></div>
+    <p class="seats">定員100名・先着順</p>
+    <p class="contact">質問だけでもお気軽に：<a href="https://www.instagram.com/hei.no.insta/?hl=ja" target="_blank" rel="noopener">Instagram DM</a></p>
+  </div>
+</section>
+
+<footer>
+  <a class="back" href="https://aisalonlev.com/" target="_blank" rel="noopener"><span class="arr">→</span> AI Salon Lev 公式サイトへ</a>
+  <p class="copy">© 2026 AI Salon Lev ／ 都市伝説カフェ Λ</p>
+</footer>
+
+<script>
+/* ▼▼ PeatixイベントページのURLをここに貼るだけで、全ボタンに反映されます ▼▼ */
+const APPLY_URL = "https://lev-lambda-20261206.peatix.com"; // PeatixのイベントURL
+/* ▲▲ ここだけ変更すればOK ▲▲ */
+document.querySelectorAll("[data-apply]").forEach(a=>{
+  a.href = APPLY_URL;
+  a.target = "_blank"; a.rel = "noopener";
+});
+
+/* header solid on scroll */
+const hd=document.getElementById("hd");
+const showHd=()=>hd.classList.toggle("show",scrollY>innerHeight*0.6);
+addEventListener("scroll",showHd,{passive:true}); showHd();
+
+/* scroll reveal */
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.16});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* FAQ accordion */
+document.querySelectorAll(".faq-q").forEach(q=>{
+  q.addEventListener("click",()=>{
+    const f=q.parentElement, open=f.classList.toggle("open");
+    q.setAttribute("aria-expanded", open);
+  });
+});
+
+/* ── ambient particles: 左=火の粉(上昇) / 右=青い粒子(漂う) ── */
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+if(!reduce){
+  const cv=document.getElementById("particles"),ctx=cv.getContext("2d");
+  let W,H,ps=[];
+  const resize=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight;build()};
+  function build(){
+    const n=Math.min(70,Math.round(W/22));
+    ps=Array.from({length:n},()=>spawn());
+  }
+  function spawn(){
+    const left=Math.random()<.5;
+    // 左寄り or 右寄りに分布。中央(0.4–0.6)は薄く
+    let x;
+    if(left){x=Math.random()*W*0.42;} else {x=W*0.58+Math.random()*W*0.42;}
+    return{
+      x, y:Math.random()*H, r:Math.random()*1.8+.6,
+      left,
+      vy: left? -(Math.random()*.5+.25) : (Math.random()*.3-.15),
+      vx: left? (Math.random()*.3-.15) : (Math.random()*.4-.2),
+      a: Math.random()*.5+.25, tw:Math.random()*Math.PI*2
+    };
+  }
+  function tick(t){
+    ctx.clearRect(0,0,W,H);
+    for(const p of ps){
+      p.x+=p.vx; p.y+=p.vy; p.tw+=0.03;
+      const flick=p.left?(0.6+Math.sin(p.tw)*0.4):(0.5+Math.sin(p.tw)*0.5);
+      if(p.left){ if(p.y<-10){p.y=H+10;p.x=Math.random()*W*0.42;} }
+      else{ if(p.y<-10)p.y=H+10; if(p.y>H+10)p.y=-10; if(p.x<W*0.5)p.x=W; }
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.r,0,7);
+      if(p.left){
+        ctx.fillStyle=`rgba(255,${160+Math.random()*40|0},90,${p.a*flick})`;
+        ctx.shadowColor="rgba(255,150,60,.8)";
+      }else{
+        ctx.fillStyle=`rgba(150,205,255,${p.a*flick})`;
+        ctx.shadowColor="rgba(110,190,255,.8)";
+      }
+      ctx.shadowBlur=p.r*4; ctx.fill(); ctx.shadowBlur=0;
+    }
+    requestAnimationFrame(tick);
+  }
+  addEventListener("resize",resize); resize(); requestAnimationFrame(tick);
+}
+</script>
+</body>
+</html>
