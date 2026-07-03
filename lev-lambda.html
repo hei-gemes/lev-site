@@ -157,7 +157,10 @@ h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
 .ov-card{padding:clamp(24px,3.2vw,34px);border:1px solid var(--line);border-radius:16px;
   background:var(--panel);transition:border-color .3s,transform .3s}
 .ov-card:hover{border-color:rgba(244,239,230,.26);transform:translateY(-2px)}
-.ov-card .k{font-family:var(--tech);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:14px}
+.ov-card .k{font-family:var(--tech);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:0}
+.ov-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
+.ov-icon{flex:0 0 auto;width:62px;height:62px;opacity:.95}
+.ov-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .ov-card .v{font-size:clamp(21px,3vw,28px);font-weight:700;line-height:1.5;letter-spacing:.02em}
 .ov-card .s{font-size:14px;color:var(--dim);margin-top:10px;line-height:1.75}
 .ov-cta{margin-top:44px;text-align:center}
@@ -175,12 +178,24 @@ h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
 .host.lev .role,.host.lev .mark{color:var(--cyber-soft)}
 .divider-seam{background:linear-gradient(var(--ember-soft),var(--cyber-soft));
   box-shadow:0 0 16px rgba(255,192,116,.4),0 0 16px rgba(124,196,255,.4)}
+.host-logo{width:94px;height:94px;border-radius:50%;overflow:hidden;margin-bottom:22px;
+  display:flex;align-items:center;justify-content:center}
+.host-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.host.lambda .host-logo{margin-left:auto;
+  box-shadow:0 0 0 1px rgba(244,161,74,.55),0 0 26px rgba(244,161,74,.26)}
+.host.lev .host-logo{margin-right:auto;
+  background:radial-gradient(circle at 50% 42%,#0f1d40,#0a1428);
+  border:1px solid rgba(77,163,255,.5);
+  box-shadow:0 0 26px rgba(77,163,255,.24),inset 0 0 18px rgba(77,163,255,.08)}
+.host.lev .host-logo img{width:72%;height:72%}
 
 /* ── RULES ── */
 #rules .list{margin-top:42px;display:grid;gap:14px}
-.rule{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
-  padding:26px clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:14px;
+.rule{position:relative;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
+  padding:26px 100px 26px clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:14px;
   background:var(--panel);transition:border-color .3s,transform .3s}
+.rule-icon{position:absolute;top:22px;right:clamp(20px,3vw,28px);width:62px;height:62px;opacity:.9}
+.rule-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .rule:hover{border-color:rgba(244,239,230,.28);transform:translateY(-2px)}
 .rule .no{font-family:var(--tech);font-weight:700;font-size:30px;line-height:1;
   background:linear-gradient(135deg,var(--ember-soft),var(--cyber-soft));
@@ -305,7 +320,9 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     background:linear-gradient(90deg,var(--ember-soft),var(--cyber-soft))}
   .host.lambda{text-align:left}
   .host.lambda .role{justify-content:flex-start}
-  .rule{grid-template-columns:1fr;gap:10px}
+  .host.lambda .host-logo{margin-left:0}
+  .rule{grid-template-columns:1fr;gap:10px;padding-right:82px}
+  .rule-icon{width:52px;height:52px;top:20px}
   .steps{grid-template-columns:1fr;gap:34px}
   .step:not(:last-child)::after{content:"↓";right:auto;left:50%;transform:translateX(-50%);top:auto;bottom:-32px}
   #target .grid{grid-template-columns:1fr}
@@ -396,10 +413,10 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     <p class="eyebrow">Overview</p>
     <h2>開催概要</h2>
     <div class="cards">
-      <div class="ov-card"><p class="k">Date</p><p class="v">2026年12月6日（日）</p><p class="s">18:30 〜 20:30</p></div>
-      <div class="ov-card"><p class="k">Place</p><p class="v">岡山城 天守閣</p><p class="s">岡山県岡山市北区丸の内2-3-1</p></div>
-      <div class="ov-card"><p class="k">Fee</p><p class="v">3,000円</p><p class="s">※ 年末特別回のため、全員一律（学割なし）</p></div>
-      <div class="ov-card"><p class="k">Capacity</p><p class="v">100名</p><p class="s">先着順・定員に達し次第しめ切り</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Date</p><span class="ov-icon"><img src="images/icon-date.png" alt=""></span></div><p class="v">2026年12月6日（日）</p><p class="s">18:30 〜 20:30</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Place</p><span class="ov-icon"><img src="images/icon-place.png" alt=""></span></div><p class="v">岡山城 天守閣</p><p class="s">岡山県岡山市北区丸の内2-3-1</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Fee</p><span class="ov-icon"><img src="images/icon-fee.png" alt=""></span></div><p class="v">3,000円</p><p class="s">※ 年末特別回のため、全員一律（学割なし）</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Capacity</p><span class="ov-icon"><img src="images/icon-capacity.png" alt=""></span></div><p class="v">100名</p><p class="s">先着順・定員に達し次第しめ切り</p></div>
     </div>
     <div class="ov-cta"><a class="btn" href="#" data-apply>参加を申し込む <span class="arr">→</span></a></div>
   </div>
@@ -412,6 +429,7 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     <h2>ふたつの場所が、ひとつに。</h2>
     <div class="pair">
       <div class="host lambda">
+        <div class="host-logo"><img src="images/logo-lambda.png" alt="都市伝説カフェ Λ のロゴ"></div>
         <p class="role">Legends</p>
         <p class="mark">都市伝説カフェ Λ</p>
         <p class="sub">LAMBDA</p>
@@ -419,6 +437,7 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
       </div>
       <div class="divider-seam"></div>
       <div class="host lev">
+        <div class="host-logo"><img src="images/logo-lev.png" alt="AI Salon Lev のロゴ"></div>
         <p class="role">Future</p>
         <p class="mark">AI Salon Lev</p>
         <p class="sub">LEV</p>
@@ -452,7 +471,7 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     <h2>当日の、内容。</h2>
     <div class="program-body">
       <p class="pick">当日は、<em>AIや都市伝説</em>をテーマにしながら、参加者同士で気軽に交流できる時間を予定しています。</p>
-      <p>難しい勉強会やセミナーではなく、<strong style="color:var(--moon);font-weight:700">会話を楽しむ交流会</strong>です。初めての方でも参加しやすい雰囲気づくりを大切にします。</p>
+      <p>ビジネスライクな堅い交流会ではなく、<strong style="color:var(--moon);font-weight:700">会話を楽しむ場</strong>です。初めての方でも参加しやすい雰囲気づくりを大切にします。</p>
       <p>また、当日は参加者同士の交流が生まれやすくなるような<strong style="color:var(--ember-soft);font-weight:600">体験型のコンテンツ</strong>も予定しています。詳細は当日のお楽しみですが、ひとりで参加する方でも自然に会話へ入りやすい内容にする予定です。</p>
     </div>
   </div>
@@ -466,17 +485,17 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     <div class="list">
       <div class="rule"><span class="no">01</span><div>
         <h3>相手の話を否定しない</h3>
-        <p>安心して話せる場づくりに、ご協力ください。どんな説も、まずは「面白い」から。</p></div></div>
+        <p>安心して話せる場づくりに、ご協力ください。どんな説も、まずは「面白い」から。</p></div><span class="rule-icon"><img src="images/icon-rule-01.png" alt=""></span></div>
       <div class="rule"><span class="no">02</span><div>
         <h3>勧誘・営業はご遠慮を</h3>
-        <p>ビジネスへの勧誘、宗教・マルチなどの営業、その他の迷惑行為はお控えください。</p></div></div>
+        <p>ビジネスへの勧誘、宗教・マルチなどの営業、その他の迷惑行為はお控えください。</p></div><span class="rule-icon"><img src="images/icon-rule-02.png" alt=""></span></div>
       <div class="rule"><span class="no">03</span><div>
         <h3>無断の撮影・録音はNG</h3>
-        <p>本人の許可なく、他の参加者を撮影・録音することはお控えください。</p></div></div>
+        <p>本人の許可なく、他の参加者を撮影・録音することはお控えください。</p></div><span class="rule-icon"><img src="images/icon-rule-03.png" alt=""></span></div>
       <div class="rule"><span class="no">04</span><div>
         <h3>距離感とマナーを大切に</h3>
         <p>お互いが気持ちよく過ごせるよう、距離感やマナーへのご配慮をお願いします。</p>
-        <span class="ps">※ 気になる行為があった際は、運営からお声がけする場合があります。</span></div></div>
+        <span class="ps">※ 気になる行為があった際は、運営からお声がけする場合があります。</span></div><span class="rule-icon"><img src="images/icon-rule-04.png" alt=""></span></div>
     </div>
   </div>
 </section>
