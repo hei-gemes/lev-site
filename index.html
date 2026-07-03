@@ -412,38 +412,30 @@ html.js .reveal.is-visible{opacity:1;transform:none}
   .meet-card{padding:28px 18px}
   .meet-title{font-size:1.26rem}
 }
-/* ===== 特別イベント バナー ===== */
+/* ===== 特別イベント バナー（ヒーロー画像版） ===== */
 .event-banner{padding:clamp(28px,6vw,52px) 0 0}
-.eb-card{position:relative;display:flex;align-items:center;gap:22px;flex-wrap:wrap;
-  padding:clamp(22px,3.5vw,30px) clamp(24px,4vw,38px);border-radius:var(--r);
-  text-decoration:none;color:var(--ink);overflow:hidden;
-  background:linear-gradient(120deg,rgba(244,161,74,.10),rgba(255,255,255,.05) 44%,rgba(77,163,255,.13));
-  border:1px solid var(--card-border);backdrop-filter:blur(8px);box-shadow:var(--shadow);
-  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
-.eb-card:hover{transform:translateY(-3px);border-color:rgba(111,208,255,.4);
-  box-shadow:0 26px 54px -24px rgba(111,208,255,.4)}
-.eb-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;
-  background:linear-gradient(180deg,#F4A14A,#4DA3FF)}
-.eb-glow{position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(60% 120% at 100% 50%,rgba(77,163,255,.14),transparent 60%),
-             radial-gradient(60% 120% at 0% 50%,rgba(244,161,74,.12),transparent 60%)}
-.eb-body{flex:1 1 300px;position:relative}
-.eb-label{font-family:"Sora",sans-serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--aqua);font-weight:600;display:inline-block;margin-bottom:10px}
+.eb-card{position:relative;display:block;border-radius:var(--r);overflow:hidden;
+  min-height:clamp(200px,34vw,260px);text-decoration:none;color:#fff;
+  border:1px solid var(--card-border);box-shadow:var(--shadow);
+  transition:transform .25s ease,box-shadow .25s ease}
+.eb-card:hover{transform:translateY(-3px);box-shadow:0 30px 60px -24px rgba(0,0,0,.75)}
+.eb-media{position:absolute;inset:0;background-image:url('images/lev-lambda-hero.jpg');
+  background-size:cover;background-position:center 42%}
+.eb-media::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(6,13,34,.86),rgba(6,13,34,.5) 52%,rgba(6,13,34,.22))}
+.eb-content{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:center;gap:20px;
+  padding:clamp(28px,4.5vw,44px) clamp(24px,4vw,44px)}
 .eb-title{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;
-  font-size:clamp(1.2rem,3.2vw,1.6rem);line-height:1.4;margin:0 0 8px;letter-spacing:.02em}
+  font-size:clamp(1.5rem,4.6vw,2.15rem);line-height:1.4;margin:0;letter-spacing:.02em;
+  text-shadow:0 2px 22px rgba(0,0,0,.65)}
 .eb-title span{white-space:nowrap}
-.eb-meta{margin:0;color:var(--muted);font-size:.95rem;line-height:1.6}
-.eb-cta{position:relative;flex:0 0 auto;font-family:"Zen Maru Gothic",sans-serif;font-weight:500;
-  padding:13px 26px;border-radius:999px;font-size:1rem;white-space:nowrap;
+.eb-cta{display:inline-flex;align-items:center;gap:8px;font-family:"Zen Maru Gothic",sans-serif;
+  font-weight:500;padding:13px 28px;border-radius:999px;font-size:1.02rem;
   background:linear-gradient(120deg,var(--aqua),var(--violet));color:#08122e;
-  box-shadow:0 12px 30px -12px rgba(111,208,255,.6)}
+  box-shadow:0 14px 32px -12px rgba(111,208,255,.65)}
 .eb-arr{display:inline-block;transition:transform .2s}
 .eb-card:hover .eb-arr{transform:translateX(3px)}
-@media(max-width:640px){
-  .eb-card{gap:16px}
-  .eb-cta{width:100%;text-align:center}
-}
 </style>
 </head>
 <body>
@@ -478,14 +470,12 @@ html.js .reveal.is-visible{opacity:1;transform:none}
 <!-- ============ 特別イベント バナー ============ -->
 <section class="event-banner" aria-label="特別イベント告知">
   <div class="wrap">
-    <a class="eb-card" href="/lev-lambda">
-      <span class="eb-glow" aria-hidden="true"></span>
-      <div class="eb-body">
-        <span class="eb-label">Year-end Special ・ 特別コラボ</span>
+    <a class="eb-card" href="/lev-lambda.html">
+      <span class="eb-media" aria-hidden="true"></span>
+      <div class="eb-content">
         <h2 class="eb-title">交流会 レヴ×ラムダ <span>in 岡山城</span></h2>
-        <p class="eb-meta">2026.12.06 SUN ／ 18:30–20:30 ／ 岡山城 天守閣</p>
+        <span class="eb-cta">特設サイトを見る <span class="eb-arr">→</span></span>
       </div>
-      <span class="eb-cta">特設サイトを見る <span class="eb-arr">→</span></span>
     </a>
   </div>
 </section>

@@ -159,7 +159,7 @@ h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
 .ov-card:hover{border-color:rgba(244,239,230,.26);transform:translateY(-2px)}
 .ov-card .k{font-family:var(--tech);font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-bottom:0}
 .ov-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
-.ov-icon{flex:0 0 auto;width:62px;height:62px;opacity:.95}
+.ov-icon{flex:0 0 auto;width:80px;height:80px;opacity:.95}
 .ov-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .ov-card .v{font-size:clamp(21px,3vw,28px);font-weight:700;line-height:1.5;letter-spacing:.02em}
 .ov-card .s{font-size:14px;color:var(--dim);margin-top:10px;line-height:1.75}
@@ -192,9 +192,9 @@ h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
 /* ── RULES ── */
 #rules .list{margin-top:42px;display:grid;gap:14px}
 .rule{position:relative;display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;
-  padding:26px 100px 26px clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:14px;
+  padding:26px 116px 26px clamp(20px,3vw,30px);border:1px solid var(--line);border-radius:14px;
   background:var(--panel);transition:border-color .3s,transform .3s}
-.rule-icon{position:absolute;top:22px;right:clamp(20px,3vw,28px);width:62px;height:62px;opacity:.9}
+.rule-icon{position:absolute;top:20px;right:clamp(20px,3vw,28px);width:80px;height:80px;opacity:.9}
 .rule-icon img{width:100%;height:100%;object-fit:contain;display:block}
 .rule:hover{border-color:rgba(244,239,230,.28);transform:translateY(-2px)}
 .rule .no{font-family:var(--tech);font-weight:700;font-size:30px;line-height:1;
@@ -321,8 +321,8 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
   .host.lambda{text-align:left}
   .host.lambda .role{justify-content:flex-start}
   .host.lambda .host-logo{margin-left:0}
-  .rule{grid-template-columns:1fr;gap:10px;padding-right:82px}
-  .rule-icon{width:52px;height:52px;top:20px}
+  .rule{grid-template-columns:1fr;gap:10px;padding-right:92px}
+  .rule-icon{width:64px;height:64px;top:18px}
   .steps{grid-template-columns:1fr;gap:34px}
   .step:not(:last-child)::after{content:"↓";right:auto;left:50%;transform:translateX(-50%);top:auto;bottom:-32px}
   #target .grid{grid-template-columns:1fr}
@@ -596,8 +596,8 @@ document.querySelectorAll(".faq-q").forEach(q=>{
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
 if(!reduce){
   const cv=document.getElementById("particles"),ctx=cv.getContext("2d");
-  let W,H,ps=[];
-  const resize=()=>{W=cv.width=innerWidth;H=cv.height=innerHeight;build()};
+  let W,H,ps=[],lastW=0;
+  function sizeCanvas(){W=cv.width=innerWidth;H=cv.height=innerHeight;}
   function build(){
     const n=Math.min(70,Math.round(W/22));
     ps=Array.from({length:n},()=>spawn());
@@ -635,7 +635,17 @@ if(!reduce){
     }
     requestAnimationFrame(tick);
   }
-  addEventListener("resize",resize); resize(); requestAnimationFrame(tick);
+  sizeCanvas();lastW=innerWidth;build();requestAnimationFrame(tick);
+  /* スクロール中はモバイルのツールバー開閉で高さだけ変わり、resizeが連発して
+     粒子が毎回再配置されチラつく。幅が変わった時だけ作り直し、間引き(debounce)する */
+  let rt;
+  addEventListener("resize",()=>{
+    clearTimeout(rt);
+    rt=setTimeout(()=>{
+      if(innerWidth===lastW)return;
+      lastW=innerWidth;sizeCanvas();build();
+    },200);
+  },{passive:true});
 }
 </script>
 </body>
