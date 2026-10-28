@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>交流会 レヴ×ラムダ in 岡山城｜2026.12.06</title>
-<meta name="description" content="年末特別回。AI Salon Lev × 都市伝説カフェ Λ。岡山城 天守閣で、未来も伝説も語り合う一夜。2026年12月6日（日）18:30〜20:30。">
+<title>都市伝説を、岡山城で。｜交流会 レヴ×ラムダ in 岡山城 2026.12.06</title>
+<meta name="description" content="都市伝説を、岡山城で。2026年12月6日（日）18:30〜20:30、岡山城天守閣でAI Salon Levと都市伝説カフェΛの交流会。受付17:30〜、参加費3,000円。Peatix事前決済またはDM予約で当日現金払い。ひとり・初心者・聞くだけの参加も歓迎。">
 <meta property="og:title" content="交流会 レヴ×ラムダ in 岡山城">
-<meta property="og:description" content="語ろう。未来も、伝説も。2026.12.06 SUN／岡山城 天守閣">
+<meta property="og:description" content="都市伝説を、岡山城で。12月6日（日）18:30〜20:30／受付17:30〜／岡山城天守閣。AIと都市伝説の交流会。Peatix事前決済・当日現金払い（要DM予約）に対応。">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://aisalonlev.com/lev-lambda">
+<meta property="og:url" content="https://aisalonlev.com/lev-lambda.html">
 <meta property="og:image" content="https://aisalonlev.com/lev-lambda-ogp.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="交流会 レヴ×ラムダ in 岡山城">
-<meta name="twitter:description" content="語ろう。未来も、伝説も。2026.12.06 SUN／岡山城 天守閣">
+<meta name="twitter:description" content="都市伝説を、岡山城で。12月6日（日）、岡山城天守閣で開催。受付17:30〜／Peatix・当日現金払い（要DM予約）。">
 <meta name="twitter:image" content="https://aisalonlev.com/lev-lambda-ogp.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,12 +105,12 @@ h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
 
 /* ── HERO ── */
 #hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;
-  align-items:center;text-align:center;padding-bottom:clamp(48px,9vh,96px);overflow:hidden}
+  align-items:center;text-align:center;padding-top:clamp(110px,15vh,160px);padding-bottom:clamp(36px,7vh,80px);overflow:hidden}
 #hero .photo{position:absolute;inset:0;z-index:-1;
   background-image:var(--hero);background-size:cover;background-position:center;}
 #hero .photo::after{content:"";position:absolute;inset:0;
   background:
-    linear-gradient(180deg,rgba(10,14,26,.46) 0%,rgba(10,14,26,0) 26%,rgba(10,14,26,0) 52%,rgba(10,14,26,.72) 100%),
+    linear-gradient(180deg,rgba(10,14,26,.50) 0%,rgba(10,14,26,.08) 27%,rgba(10,14,26,.30) 52%,rgba(10,14,26,.90) 100%),
     radial-gradient(80% 60% at 50% 88%, rgba(10,14,26,.6), transparent 70%);}
 .hero-tag{font-family:var(--tech);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;
   color:var(--ember-soft);margin-bottom:22px;opacity:0;animation:rise .9s .15s forwards}
@@ -130,7 +130,7 @@ h2{font-family:var(--mincho);font-weight:700;line-height:1.35;
 .hero-meta .sep{color:rgba(164,173,194,.45)}
 .hero-meta .hl{color:var(--moon)}
 .hero-cta{margin-top:34px;opacity:0;animation:rise 1s .78s forwards}
-.btn{position:relative;overflow:hidden;font-family:var(--tech);font-weight:700;letter-spacing:.04em;font-size:16px;
+.btn{position:relative;overflow:hidden;font-family:var(--tech);font-weight:700;letter-spacing:.04em;font-size:16px;cursor:pointer;border:0;justify-content:center;text-align:center;
   display:inline-flex;align-items:center;gap:.6em;text-decoration:none;color:var(--ink);
   padding:16px 36px;border-radius:999px;
   background:linear-gradient(95deg,var(--ember-soft),#fff 50%,var(--cyber-soft));
@@ -303,6 +303,69 @@ footer .back:hover{color:var(--cyber-soft)}
 footer .arr{transform:rotate(180deg)}
 footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:var(--dim);margin-top:18px}
 
+
+/* ── 更新された参加導線と受付案内 ── */
+.hero-brief{max-width:720px;margin-top:16px;font-size:clamp(13px,2.5vw,16px);line-height:1.85;color:#f0e9e0;text-shadow:0 2px 18px rgba(0,0,0,.85)}
+.hero-attendance{margin-top:16px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.hero-attendance span{padding:6px 14px;border:1px solid rgba(244,239,230,.36);border-radius:999px;background:rgba(7,11,22,.7);font-size:clamp(12.5px,2.2vw,14px)}
+.hero-attendance strong{color:#fff;font-weight:700}
+.action-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px}
+.btn.secondary{background:rgba(9,17,32,.83);color:#fff;border:1px solid rgba(244,239,230,.64);box-shadow:0 4px 16px rgba(0,0,0,.24);font-size:15px}
+.btn.secondary:hover{box-shadow:0 8px 26px rgba(124,196,255,.2);border-color:var(--cyber-soft)}
+.hero-note{max-width:680px;margin-top:16px;font-size:13px;color:#e4e8f3;text-shadow:0 2px 12px #000}
+.access-panel{margin-top:26px;padding:26px clamp(22px,3.5vw,36px);background:rgba(13,19,34,.78);border:1px solid rgba(244,239,230,.25);border-radius:16px}
+.access-panel h3{font-family:var(--mincho);font-size:clamp(19px,3vw,23px);margin-bottom:10px}
+.access-panel p{font-size:15px;color:#e7e3d9;line-height:1.9}
+.access-panel strong{color:var(--ember-soft)}
+.access-panel a{display:inline-block;margin-top:12px;color:var(--cyber-soft);font-weight:700;text-underline-offset:4px}
+.access-panel .access-sub{margin-top:8px;color:var(--dim);font-size:13px}
+.payment-routes{margin-top:42px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.payment-route{padding:clamp(24px,3vw,34px);border:1px solid var(--line);border-radius:16px;background:var(--panel);display:flex;flex-direction:column}
+.payment-route.cash{border-color:rgba(255,192,116,.45)}
+.payment-route .route-tag{font:700 12px var(--tech);letter-spacing:.09em;color:var(--cyber-soft);margin-bottom:10px}
+.payment-route.cash .route-tag{color:var(--ember-soft)}
+.payment-route h3{font-family:var(--mincho);font-size:clamp(19px,3vw,24px);margin-bottom:16px}
+.payment-route ol{padding-left:1.5em;margin:0 0 26px;color:#e7e3d9;font-size:14.5px;line-height:1.9;flex:1}
+.payment-route li+li{margin-top:8px}
+.payment-route .route-note{font-size:13px;color:var(--dim);margin-top:12px;line-height:1.8}
+.payment-route .btn{width:100%;padding:14px 18px}
+.flow-note{text-align:center;color:var(--dim);font-size:14px;margin-top:20px}
+#join .join-guide{color:#e7e3d9;max-width:680px;margin:20px auto 0;font-size:15px}
+#join .cta-wrap{margin-top:30px}
+#join .cash-notice{font-size:13.5px;color:var(--ember-soft);margin-top:16px}
+
+/* ── 現金払いDM申込ポップアップ ── */
+body.modal-open{overflow:hidden}
+.cash-modal[hidden]{display:none}
+.cash-modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px 14px;overflow-y:auto}
+.cash-backdrop{position:fixed;inset:0;background:rgba(4,8,17,.82);backdrop-filter:blur(8px)}
+.cash-dialog{position:relative;width:100%;max-width:550px;max-height:calc(100dvh - 40px);overflow-y:auto;overscroll-behavior:contain;margin:auto;padding:clamp(26px,5vw,40px);background:linear-gradient(135deg,#15131b,#101e33);border:1px solid rgba(244,239,230,.35);border-radius:20px;box-shadow:0 30px 90px rgba(0,0,0,.65);color:var(--moon)}
+.cash-dialog h2{padding-right:36px;font-size:clamp(23px,5vw,30px);margin:10px 0 14px}
+.cash-dialog p{font-size:14.5px;line-height:1.85}
+.cash-dialog .modal-eyebrow{font:700 12px var(--tech);letter-spacing:.18em;color:var(--ember-soft)}
+.modal-close{position:absolute;right:14px;top:12px;width:40px;height:40px;display:grid;place-items:center;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:50%;color:#fff;font-size:24px;cursor:pointer}
+.cash-dialog .modal-steps{margin:18px 0;padding-left:1.5em;color:#e7e3d9;font-size:14px;line-height:1.85}
+.cash-dialog .modal-steps li+li{margin-top:5px}
+.copy-template{background:rgba(3,9,20,.74);border:1px solid rgba(244,239,230,.2);border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;padding:17px;font-family:var(--gothic);font-size:14px;line-height:2;color:#fff;user-select:text}
+.modal-buttons{display:grid;gap:10px;margin-top:14px}
+.modal-buttons .btn{width:100%;padding:13px 20px}
+.copy-status{min-height:23px;margin-top:6px;color:var(--ember-soft);font-weight:700;text-align:center}
+.cash-dialog .modal-help{font-size:12.5px;color:var(--dim);margin-top:12px;line-height:1.85}
+.cash-dialog .modal-help a{color:var(--cyber-soft);text-underline-offset:3px}
+.cash-dialog .modal-warning{font-size:13px;color:var(--ember-soft);margin-top:14px;font-weight:700}
+@media(max-width:720px){
+  .hero-cta{width:100%;padding:0 18px}
+  .hero-cta .action-row{width:100%;flex-direction:column;gap:10px}
+  .hero-cta .btn{width:100%;max-width:400px;padding:13px 20px;font-size:14px}
+  .hero-attendance{gap:7px;padding:0 12px}
+  .hero-attendance span{padding:5px 10px}
+  .payment-routes{grid-template-columns:1fr}
+  .ov-cta .action-row,#join .action-row{flex-direction:column}
+  .ov-cta .btn,#join .btn{width:100%;max-width:410px}
+  .cash-dialog{max-height:calc(100dvh - 24px)}
+  .cash-modal{padding:12px}
+}
+
 /* ── reveal ── */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
 .reveal.in{opacity:1;transform:none}
@@ -331,7 +394,7 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
 
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto!important}
-  .catch,.hero-title,.hero-meta{opacity:1}
+  .catch,.hero-title,.hero-meta,.hero-cta{opacity:1}
   .reveal{opacity:1;transform:none}
   .reveal .seam{transform:none}
   .faq-a,.faq-ic::before,.faq-ic::after,.btn::before{transition:none}
@@ -350,61 +413,25 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
 
 <!-- HERO -->
 <section id="hero">
-  <div class="photo"></div>
-  <h1 class="catch">語ろう。<span class="f">未来</span>も、<span class="l">伝説</span>も。</h1>
-  <p class="hero-title">交流会　レヴ×ラムダ　in 岡山城</p>
+  <div class="photo" aria-hidden="true"></div>
+  <h1 class="catch">都市伝説を、<span class="l">岡山城で。</span></h1>
+  <p class="hero-title">交流会 レヴ×ラムダ in 岡山城</p>
+  <p class="hero-brief">AIが好きな方も。都市伝説が好きな方も。<br>ひとりでも、詳しくなくても、聞くだけでも。</p>
   <p class="hero-meta">
     <span class="hl">2026.12.06 SUN</span><span class="sep">/</span>
     <span>18:30 – 20:30</span><span class="sep">/</span>
     <span>岡山城 天守閣</span>
   </p>
-</section>
-
-<!-- CONCEPT -->
-<section id="concept">
-  <div class="wrap reveal">
-    <span class="seam"></span>
-    <p class="eyebrow center">Concept</p>
-    <h2>AIや都市伝説が<br>好きな方へ。</h2>
-    <p class="lead">
-      岡山城の夜に、<br>
-      少し<em class="b">不思議</em>で少し<em>未来的</em>な<br>
-      交流会を開催します。<br><br>
-      AIをテーマにした交流コミュニティ<br>
-      「<em>レヴ</em>」と、<br>
-      都市伝説・不思議な話を楽しむ交流会<br>
-      「<em class="b">ラムダ</em>」が、<br>
-      岡山城で一夜限りの<br>
-      コラボイベントを開催します。<br><br>
-      AI、都市伝説、歴史、テクノロジー、<br>
-      これからの生き方。<br>
-      普段なかなか話せないテーマを、<br>
-      岡山城という特別な場所で<br>
-      気軽に語り合う交流会です。
-    </p>
+  <div class="hero-attendance">
+    <span>受付開始 <strong>17:30〜</strong></span>
+    <span>受付場所 <strong>天守閣入口前</strong></span>
+    <span>参加費 <strong>3,000円</strong></span>
   </div>
-</section>
-
-<!-- WELCOME -->
-<section id="welcome">
-  <div class="wrap reveal">
-    <p class="eyebrow center">Welcome</p>
-    <h2>専門知識は、<br>必要ありません。</h2>
-    <div class="welcome-cards">
-      <div class="welcome-card">
-        <p class="key">どんな方も、<br>歓迎です。</p>
-        <p>AIに詳しい方はもちろん、最近少し気になっている方、都市伝説や不思議な話が好きな方、人と話すきっかけがほしい方も歓迎です。</p>
-      </div>
-      <div class="welcome-card">
-        <p class="key">聞くだけでも、<br>大丈夫。</p>
-        <p>「話すのが得意じゃない」という方も大丈夫。聞くだけの参加でも、雰囲気を楽しむだけでも構いません。</p>
-      </div>
-      <div class="welcome-card">
-        <p class="key">否定しない、<br>一夜に。</p>
-        <p>未来の話も、不思議な話も、否定せずに楽しめる場にしたいと思っています。</p>
-      </div>
-    </div>
-  </div>
+  <div class="hero-cta"><div class="action-row">
+    <a class="btn" href="https://lev-lambda-20261206.peatix.com" target="_blank" rel="noopener" data-apply>Peatixで事前申し込み <span class="arr" aria-hidden="true">→</span></a>
+    <button class="btn secondary" type="button" data-open-cash>当日現金払いで申し込む <span class="arr" aria-hidden="true">→</span></button>
+  </div></div>
+  <p class="hero-note">当日現金払いをご希望の方は、人数把握のため事前のDM申し込みが必須です。</p>
 </section>
 
 <!-- OVERVIEW -->
@@ -413,12 +440,37 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     <p class="eyebrow">Overview</p>
     <h2>開催概要</h2>
     <div class="cards">
-      <div class="ov-card"><div class="ov-top"><p class="k">Date</p><span class="ov-icon"><img src="images/icon-date.png" alt=""></span></div><p class="v">2026年12月6日（日）</p><p class="s">18:30 〜 20:30</p></div>
-      <div class="ov-card"><div class="ov-top"><p class="k">Place</p><span class="ov-icon"><img src="images/icon-place.png" alt=""></span></div><p class="v">岡山城 天守閣</p><p class="s">岡山県岡山市北区丸の内2-3-1</p></div>
-      <div class="ov-card"><div class="ov-top"><p class="k">Fee</p><span class="ov-icon"><img src="images/icon-fee.png" alt=""></span></div><p class="v">3,000円</p><p class="s">※ 年末特別回のため、全員一律（学割なし）</p></div>
-      <div class="ov-card"><div class="ov-top"><p class="k">Capacity</p><span class="ov-icon"><img src="images/icon-capacity.png" alt=""></span></div><p class="v">100名</p><p class="s">先着順・定員に達し次第しめ切り</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Date</p><span class="ov-icon"><img src="images/icon-date.png" alt=""></span></div><p class="v">2026年12月6日（日）</p><p class="s">イベント 18:30〜20:30<br><strong style="color:var(--ember-soft)">受付開始 17:30〜</strong></p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Place</p><span class="ov-icon"><img src="images/icon-place.png" alt=""></span></div><p class="v">岡山城 天守閣</p><p class="s">岡山県岡山市北区丸の内2-3-1<br><strong style="color:var(--ember-soft)">受付：天守閣入口前</strong></p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Fee</p><span class="ov-icon"><img src="images/icon-fee.png" alt=""></span></div><p class="v">3,000円</p><p class="s">Peatix事前決済、または事前DM申し込みで当日現金払い</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Capacity</p><span class="ov-icon"><img src="images/icon-capacity.png" alt=""></span></div><p class="v">100名</p><p class="s">先着順・定員に達し次第締め切り</p></div>
     </div>
-    <div class="ov-cta"><a class="btn" href="#" data-apply>参加を申し込む <span class="arr">→</span></a></div>
+    <div class="access-panel">
+      <h3>受付場所・会場アクセス</h3>
+      <p>受付は<strong>岡山城 天守閣入口前</strong>で、<strong>17:30から</strong>開始します。イベントは18:30開始です。時間に余裕を持って、天守閣入口前へお越しください。</p>
+      <p class="access-sub">会場住所：岡山県岡山市北区丸の内2-3-1</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B2%A1%E5%B1%B1%E5%9F%8E%20%E5%A4%A9%E5%AE%88%E9%96%A3" target="_blank" rel="noopener">Googleマップで岡山城を確認 →</a>
+    </div>
+    <div class="ov-cta"><div class="action-row">
+      <a class="btn" href="https://lev-lambda-20261206.peatix.com" target="_blank" rel="noopener" data-apply>Peatixで事前申し込み <span class="arr" aria-hidden="true">→</span></a>
+      <button class="btn secondary" type="button" data-open-cash>当日現金払いで申し込む <span class="arr" aria-hidden="true">→</span></button>
+    </div></div>
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<section id="concept">
+  <div class="wrap reveal">
+    <span class="seam"></span>
+    <p class="eyebrow center">Concept</p>
+    <h2>AIも都市伝説も、<br>気軽に話せる夜。</h2>
+    <p class="lead">
+      都市伝説や未解明の謎を楽しむ「<em class="b">都市伝説カフェ Λ（ラムダ）</em>」と、<br>
+      AIについて初心者でも気軽に話せる「<em>AI Salon Lev（レヴ）</em>」。<br><br>
+      ふたつの交流会が、岡山城の天守閣に集まります。<br>
+      普段はなかなか話せない不思議なこと、未来のこと。<br>
+      好きな話題を通じて、ゆるやかにつながる夜です。
+    </p>
   </div>
 </section>
 
@@ -433,7 +485,7 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
         <p class="role">Legends</p>
         <p class="mark">都市伝説カフェ Λ</p>
         <p class="sub">LAMBDA</p>
-        <p>都市伝説や未解明の謎、ちょっと不思議な話を、都市伝説好き同士で楽しむ交流会。本当かどうかより、興味深い話を共有する場です。</p>
+        <p>都市伝説や未解明の謎、ちょっと不思議な話を楽しむ交流会。好きな話を持ち寄り、気軽に語り合える場所です。</p>
       </div>
       <div class="divider-seam"></div>
       <div class="host lev">
@@ -441,7 +493,43 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
         <p class="role">Future</p>
         <p class="mark">AI Salon Lev</p>
         <p class="sub">LEV</p>
-        <p>AIニュースやツールを、初心者でも安心して話せる岡山のコミュニティ。知識を競わず、一緒に試しながら少しずつ慣れていく場です。</p>
+        <p>AIニュースやツールを、初心者でも気軽に話せるコミュニティ。知識を競う場所ではなく、気になったことを共有する場所です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="wrap reveal">
+    <p class="eyebrow">Program</p>
+    <h2>当日の、楽しみ方。</h2>
+    <div class="program-body">
+      <p class="pick">AIや都市伝説をきっかけに、<em>好きな話でつながる交流会。</em></p>
+      <p>ビジネスライクな堅い交流会ではなく、会話を楽しむ場です。詳しい方も初めての方も、自由に交流を楽しめます。</p>
+      <p class="pick"><em>岡山城に隠された、ちょっとした謎。</em></p>
+      <p>当日は、参加者同士で協力して楽しめる、ちょっとした謎解き要素もご用意しています。難しい知識は必要ありません。初めて会う人とも自然に会話が始まるきっかけに。謎の詳しい内容は当日のお楽しみです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- WELCOME -->
+<section id="welcome">
+  <div class="wrap reveal">
+    <p class="eyebrow center">Welcome</p>
+    <h2>ひとりでも。<br>詳しくなくても。<br>聞くだけでも。</h2>
+    <div class="welcome-cards">
+      <div class="welcome-card">
+        <p class="key">初心者も、<br>大歓迎。</p>
+        <p>AIも都市伝説も、興味があれば十分。詳しい知識や事前準備はいりません。</p>
+      </div>
+      <div class="welcome-card">
+        <p class="key">聞くだけでも、<br>大丈夫。</p>
+        <p>話すのが得意でなくても大丈夫。無理に話さず、雰囲気を楽しむだけでも構いません。</p>
+      </div>
+      <div class="welcome-card">
+        <p class="key">ひとりでも、<br>安心して。</p>
+        <p>初めての方やお一人での参加も歓迎です。話のきっかけになる小さな企画もご用意しています。</p>
       </div>
     </div>
   </div>
@@ -459,21 +547,40 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
       <div class="target-item"><span class="ic">✓</span><p>レヴやラムダの活動が気になっている方</p></div>
       <div class="target-item"><span class="ic">✓</span><p>普段なかなか話せないテーマを語りたい方</p></div>
       <div class="target-item"><span class="ic">✓</span><p>聞き専でも参加できるイベントを探している方</p></div>
-      <div class="target-item"><span class="ic">✓</span><p>興味はあるけど、交流会に行ったことがない方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>交流会に初めて参加する方</p></div>
     </div>
   </div>
 </section>
 
-<!-- PROGRAM -->
-<section id="program">
+<!-- FLOW -->
+<section id="flow">
   <div class="wrap reveal">
-    <p class="eyebrow">Program</p>
-    <h2>当日の、内容。</h2>
-    <div class="program-body">
-      <p class="pick">当日は、<em>AIや都市伝説</em>をテーマにしながら、参加者同士で気軽に交流できる時間を予定しています。</p>
-      <p>ビジネスライクな堅い交流会ではなく、<strong style="color:var(--moon);font-weight:700">会話を楽しむ場</strong>です。初めての方でも参加しやすい雰囲気づくりを大切にします。</p>
-      <p>また、当日は参加者同士の交流が生まれやすくなるような<strong style="color:var(--ember-soft);font-weight:600">体験型のコンテンツ</strong>も予定しています。詳細は当日のお楽しみですが、ひとりで参加する方でも自然に会話へ入りやすい内容にする予定です。</p>
+    <p class="eyebrow">How to join</p>
+    <h2>参加方法は、2通り。</h2>
+    <div class="payment-routes">
+      <div class="payment-route">
+        <p class="route-tag">01 / 事前決済</p>
+        <h3>Peatixで申し込む</h3>
+        <ol>
+          <li>Peatixのイベントページからチケットを申し込み、事前にお支払いください。</li>
+          <li>購入後、Peatixの注文確認メールまたはアプリでチケットをご確認ください。</li>
+          <li>当日17:30以降、天守閣入口前の受付でチケット画面をご提示ください。</li>
+        </ol>
+        <a class="btn" href="https://lev-lambda-20261206.peatix.com" target="_blank" rel="noopener" data-apply>Peatixで事前申し込み <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+      <div class="payment-route cash">
+        <p class="route-tag">02 / 当日現金払い</p>
+        <h3>InstagramのDMで申し込む</h3>
+        <ol>
+          <li>下のボタンから申込テンプレートをコピーします。</li>
+          <li>お名前・参加人数を記入し、InstagramのDMで<strong>必ず事前に</strong>送信してください（人数把握のため）。</li>
+          <li>当日17:30以降、天守閣入口前の受付で参加費3,000円を現金でお支払いください（1名につき）。</li>
+        </ol>
+        <button class="btn secondary" type="button" data-open-cash>当日現金払いのDM申し込み <span class="arr" aria-hidden="true">→</span></button>
+        <p class="route-note">※ DM送信が必要です。テンプレートのコピーだけでは申し込みは完了しません。</p>
+      </div>
     </div>
+    <p class="flow-note">定員100名・先着順。どちらの参加方法でも、受付は天守閣入口前・17:30からです。</p>
   </div>
 </section>
 
@@ -500,25 +607,6 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
   </div>
 </section>
 
-<!-- FLOW -->
-<section id="flow">
-  <div class="wrap reveal">
-    <p class="eyebrow">How to join</p>
-    <h2>参加までの、3ステップ。</h2>
-    <div class="steps">
-      <div class="step"><div class="step-no"><span>01</span></div>
-        <h3>Peatixで申し込み</h3>
-        <p>Peatixのイベントページからチケットを購入します（事前決済）。</p></div>
-      <div class="step"><div class="step-no"><span>02</span></div>
-        <h3>チケットを受け取る</h3>
-        <p>購入後、Peatixより注文確認メールが届きます。チケットはPeatixのメール、またはPeatixアプリから確認できます。</p></div>
-      <div class="step"><div class="step-no"><span>03</span></div>
-        <h3>交流会に参加</h3>
-        <p>岡山城・天守閣でお会いしましょう。当日は、Peatixのチケット画面をご提示ください。</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section id="faq">
   <div class="wrap reveal">
@@ -526,24 +614,32 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
     <h2>よくある質問。</h2>
     <div class="faqs">
       <div class="faq">
-        <button class="faq-q" aria-expanded="false"><span>1人でも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-in"><p>もちろんです。お一人での参加が大半なので、初めての方も気軽にお越しください。</p></div></div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-solo"><span>1人でも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-solo"><div class="faq-a-in"><p>もちろんです。お一人での参加も大歓迎です。初めての方も気軽にお越しください。</p></div></div>
       </div>
       <div class="faq">
-        <button class="faq-q" aria-expanded="false"><span>県外からでも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-in"><p>大歓迎です。岡山城・天守閣での開催なので、旅行や観光とあわせてぜひ。</p></div></div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-outside"><span>県外からでも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-outside"><div class="faq-a-in"><p>大歓迎です。岡山城・天守閣での開催なので、旅行や観光とあわせてぜひ。</p></div></div>
       </div>
       <div class="faq">
-        <button class="faq-q" aria-expanded="false"><span>AIも都市伝説も詳しくないのですが、大丈夫ですか？</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-in"><p>問題ありません。「詳しくないけど興味がある」という方こそ歓迎です。聞くだけの参加でも大丈夫です。</p></div></div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-beginner"><span>AIも都市伝説も詳しくないのですが、大丈夫ですか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-beginner"><div class="faq-a-in"><p>問題ありません。「詳しくないけど興味がある」という方こそ歓迎です。聞くだけの参加でも大丈夫です。</p></div></div>
       </div>
       <div class="faq">
-        <button class="faq-q" aria-expanded="false"><span>参加費の支払い方法は？</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-in"><p>お申し込みはPeatixでの事前決済です。クレジットカード・コンビニ払いなどがご利用いただけます。</p></div></div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-pay"><span>参加費の支払い方法は？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-pay"><div class="faq-a-in"><p>参加費は1名3,000円です。Peatixでの事前決済と、当日受付での現金払いに対応しています。当日現金払いをご希望の場合は、人数把握のため、必ず事前にInstagramのDMでお申し込みください。</p></div></div>
       </div>
       <div class="faq">
-        <button class="faq-q" aria-expanded="false"><span>キャンセル・返金はできますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-in"><p>2026年11月29日（日）23:59までにご連絡いただいた場合のみ、キャンセル・返金に対応いたします。11月30日（月）以降のキャンセルは、準備・運営の都合上、返金対応はできません。なお、主催者都合でイベントが中止となった場合は返金対応を行います。<br>※Peatixの仕様上、お支払い方法や返金タイミングによっては、返金手数料が発生する場合があります。</p></div></div>
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-cash"><span>当日現金払いは、予約なしでも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-cash"><div class="faq-a-in"><p>いいえ。定員・人数把握のため、必ず事前にInstagramのDMでお名前（ニックネームOK）と参加人数をお送りください。ページ内の「当日現金払いで申し込む」ボタンからテンプレートをコピーできます。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-reception"><span>受付は何時から、どこで行いますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-reception"><div class="faq-a-in"><p>受付は17:30から、岡山城の天守閣入口前で行います。イベント開始は18:30です。会場まで余裕を持ってお越しください。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-cancel"><span>キャンセル・返金はできますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a" id="faq-cancel"><div class="faq-a-in"><p>Peatixでお支払い済みの方は、2026年11月29日（日）23:59までにご連絡いただいた場合のみ、キャンセル・返金に対応いたします。11月30日（月）以降のキャンセルは返金できません。主催者都合でイベントが中止となった場合は返金対応を行います。<br>※お支払い方法や返金タイミングによっては、Peatixの返金手数料が発生する場合があります。<br>当日現金払いでDM申し込み済みの方がキャンセルする場合も、人数把握のためお早めにDMでご連絡ください。</p></div></div>
       </div>
     </div>
   </div>
@@ -554,10 +650,15 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
   <div class="wrap reveal">
     <span class="seam"></span>
     <p class="eyebrow center">Join</p>
-    <h2>AIや都市伝説好きな方、<br>ぜひお待ちしてます。</h2>
-    <div class="cta-wrap"><a class="btn" href="#" data-apply>参加を申し込む <span class="arr">→</span></a></div>
-    <p class="seats">定員100名・先着順</p>
-    <p class="contact">質問だけでもお気軽に：<a href="https://www.instagram.com/hei.no.insta/?hl=ja" target="_blank" rel="noopener">Instagram DM</a></p>
+    <h2>都市伝説を、岡山城で。</h2>
+    <p class="join-guide">AIが好きな方も。都市伝説が好きな方も。<br>ひとりでも、詳しくなくても、聞くだけでも。<br>12月6日、岡山城の天守閣でお待ちしています。</p>
+    <div class="cta-wrap"><div class="action-row">
+      <a class="btn" href="https://lev-lambda-20261206.peatix.com" target="_blank" rel="noopener" data-apply>Peatixで事前申し込み <span class="arr" aria-hidden="true">→</span></a>
+      <button class="btn secondary" type="button" data-open-cash>当日現金払いで申し込む <span class="arr" aria-hidden="true">→</span></button>
+    </div></div>
+    <p class="cash-notice">当日現金払いの方は、必ず事前にDMでお申し込みください。</p>
+    <p class="seats">定員100名・先着順 ／ 受付17:30〜・天守閣入口前</p>
+    <p class="contact">ご質問はお気軽に：<a href="https://www.instagram.com/hei.no.insta/" target="_blank" rel="noopener">Instagram DM</a></p>
   </div>
 </section>
 
@@ -566,6 +667,34 @@ footer .copy{font-family:var(--tech);font-size:11.5px;letter-spacing:.1em;color:
   <p class="copy">© 2026 AI Salon Lev ／ 都市伝説カフェ Λ</p>
 </footer>
 
+
+<!-- 当日現金払いのDM申し込み（テンプレートをコピーして送信） -->
+<div class="cash-modal" id="cash-modal" hidden>
+  <div class="cash-backdrop" data-close-cash aria-hidden="true"></div>
+  <div class="cash-dialog" role="dialog" aria-modal="true" aria-labelledby="cash-modal-title" aria-describedby="cash-modal-desc" tabindex="-1">
+    <button class="modal-close" type="button" aria-label="申し込み案内を閉じる" data-close-cash>×</button>
+    <p class="modal-eyebrow">CASH PAYMENT / DM RESERVATION</p>
+    <h2 id="cash-modal-title">当日現金払いは、<br>DMで申し込む。</h2>
+    <p id="cash-modal-desc">当日現金払いをご希望の方は、<strong>人数把握のため必ず事前に</strong>InstagramのDMでお申し込みください。参加費は当日の受付で1名3,000円をお支払いいただきます。</p>
+    <ol class="modal-steps">
+      <li>以下のテンプレートをコピー</li>
+      <li>お名前・参加人数を記入</li>
+      <li>InstagramのDMで送信して申し込み</li>
+    </ol>
+    <pre class="copy-template" id="cash-template">【12/6 岡山城イベント・当日現金払い希望】
+お名前（ニックネームOK）：
+参加人数：
+メモ（任意）：</pre>
+    <div class="modal-buttons">
+      <button class="btn" type="button" id="copy-cash-template">テンプレートをコピー</button>
+      <a class="btn secondary" href="https://ig.me/m/hei.no.insta" target="_blank" rel="noopener">InstagramでDMを送る <span class="arr" aria-hidden="true">→</span></a>
+    </div>
+    <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    <p class="modal-warning">※コピーしただけでは申込完了になりません。必ずDMを送信してください。</p>
+    <p class="modal-help">DM画面が開かない場合は、<a href="https://www.instagram.com/hei.no.insta/" target="_blank" rel="noopener">Instagramプロフィール（@hei.no.insta）</a>から「メッセージ」を選んでください。Instagramへのログインが必要な場合があります。</p>
+  </div>
+</div>
+
 <script>
 /* ▼▼ PeatixイベントページのURLをここに貼るだけで、全ボタンに反映されます ▼▼ */
 const APPLY_URL = "https://lev-lambda-20261206.peatix.com"; // PeatixのイベントURL
@@ -573,6 +702,61 @@ const APPLY_URL = "https://lev-lambda-20261206.peatix.com"; // Peatixのイベ�
 document.querySelectorAll("[data-apply]").forEach(a=>{
   a.href = APPLY_URL;
   a.target = "_blank"; a.rel = "noopener";
+});
+
+
+/* 現金払いのDM申し込み：開閉・コピー・キーボード操作 */
+const cashModal=document.getElementById("cash-modal");
+const cashDialog=cashModal.querySelector(".cash-dialog");
+const copyButton=document.getElementById("copy-cash-template");
+const copyStatus=document.getElementById("copy-status");
+const cashTemplate=document.getElementById("cash-template");
+let cashPreviousFocus=null;
+function openCashModal(){
+  cashPreviousFocus=document.activeElement;
+  cashModal.hidden=false;
+  document.body.classList.add("modal-open");
+  copyStatus.textContent="";
+  copyButton.textContent="テンプレートをコピー";
+  cashDialog.focus();
+}
+function closeCashModal(){
+  cashModal.hidden=true;
+  document.body.classList.remove("modal-open");
+  if(cashPreviousFocus && typeof cashPreviousFocus.focus==="function")cashPreviousFocus.focus();
+}
+document.querySelectorAll("[data-open-cash]").forEach(button=>button.addEventListener("click",openCashModal));
+cashModal.querySelectorAll("[data-close-cash]").forEach(button=>button.addEventListener("click",closeCashModal));
+document.addEventListener("keydown",event=>{
+  if(cashModal.hidden)return;
+  if(event.key==="Escape"){event.preventDefault();closeCashModal();return;}
+  if(event.key!=="Tab")return;
+  const focusable=[...cashDialog.querySelectorAll("a[href],button:not([disabled]),[tabindex]:not([tabindex='-1'])")].filter(el=>el.getClientRects().length);
+  if(!focusable.length){event.preventDefault();cashDialog.focus();return;}
+  const first=focusable[0],last=focusable[focusable.length-1];
+  if(event.shiftKey && (document.activeElement===first || document.activeElement===cashDialog)){event.preventDefault();last.focus();}
+  else if(!event.shiftKey && document.activeElement===last){event.preventDefault();first.focus();}
+});
+copyButton.addEventListener("click",async()=>{
+  const content=cashTemplate.textContent.trim();
+  try{
+    if(navigator.clipboard && window.isSecureContext){
+      await navigator.clipboard.writeText(content);
+    }else{
+      const input=document.createElement("textarea");
+      input.value=content;
+      input.setAttribute("readonly","");
+      input.style.position="fixed";input.style.opacity="0";
+      document.body.appendChild(input);input.select();
+      const success=document.execCommand("copy");
+      input.remove();
+      if(!success)throw new Error("copy failed");
+    }
+    copyButton.textContent="コピーしました！";
+    copyStatus.textContent="コピーしました！ お名前・参加人数を記入してDMで送信してください。";
+  }catch(error){
+    copyStatus.textContent="自動コピーできませんでした。上の文章を選択してコピーしてください。";
+  }
 });
 
 /* header solid on scroll */
