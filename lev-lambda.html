@@ -401,117 +401,61 @@ body.modal-open{overflow:hidden}
 }
 :focus-visible{outline:2px solid var(--cyber-soft);outline-offset:3px;border-radius:6px}
 
-/* Mobile-first cleanup — keep text separate from the image's built-in logos */
+
+/* Restored original sections; only new features use concise styles */
 :root{scroll-padding-top:84px}
-body{line-height:1.75}
-section{padding:clamp(66px,9vw,108px) clamp(20px,5vw,40px)}
-.wrap{max-width:970px}
-.section-center{text-align:center}
-.section-lead{margin:26px auto 0;max-width:760px;text-align:center;color:#e7e3d9;font-size:clamp(16px,2.4vw,19px);line-height:2}
-#hero{padding:0;min-height:0;display:block;overflow:hidden;text-align:center;background:#090f1c}
-#hero .hero-headline{padding:clamp(44px,7vw,78px) 18px 24px;background:linear-gradient(180deg,#0b101e,#090f1c)}
-#hero .hero-overline{font-size:clamp(13px,1.7vw,16px);letter-spacing:.05em;color:#c6d1e8;margin-bottom:16px;font-weight:600}
+.btn{cursor:pointer;border:0;justify-content:center;text-align:center}
+.btn.secondary{background:rgba(9,17,32,.85);color:#fff;border:1px solid rgba(244,239,230,.60);box-shadow:0 4px 16px rgba(0,0,0,.24)}
+.action-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px}
+#hero{padding:0;min-height:0;display:block;text-align:center;overflow:hidden;background:#090f1c}
+#hero .hero-headline{padding:clamp(42px,6vw,74px) 18px 24px;background:linear-gradient(180deg,#0b101e,#090f1c)}
+#hero .hero-overline{font-size:clamp(13px,1.8vw,16px);letter-spacing:.05em;color:#c6d1e8;margin-bottom:16px;font-weight:600}
 #hero h1{font:800 clamp(33px,7vw,68px)/1.42 var(--mincho);letter-spacing:.025em}
 #hero h1 span{color:var(--ember-soft);white-space:nowrap}
-#hero .hero-art{height:clamp(440px,52vw,670px);background-image:var(--hero);background-size:cover;background-position:center top;background-repeat:no-repeat;position:relative}
+#hero .hero-art{height:clamp(450px,52vw,670px);background-image:var(--hero);background-position:center top;background-size:cover;background-repeat:no-repeat;position:relative}
 #hero .hero-art::after{content:"";position:absolute;inset:68% 0 0;background:linear-gradient(transparent,#090f1c)}
-#hero .hero-bottom{padding:8px 20px 38px;background:#090f1c}
+#hero .hero-bottom{padding:8px 20px 40px;background:#090f1c}
 .hero-day{font:700 clamp(19px,3vw,25px)/1.6 var(--mincho)}
 .hero-time{font-size:clamp(15px,2.7vw,19px);margin:5px 0 0;color:#d9e1f3}
 .hero-time span{color:#8fa1c4;padding:0 5px}
 .hero-scroll{display:inline-flex;flex-direction:column;align-items:center;margin-top:21px;color:#aebbd2;text-decoration:none;font:600 11px var(--tech);letter-spacing:.14em}
 .hero-scroll span{font-size:22px}
-.nav-cta{min-width:105px;text-align:center;font-size:14px}
-.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
-.experience-card{padding:clamp(24px,4vw,36px);border:1px solid var(--line);border-radius:18px;background:var(--panel)}
-.experience-index{font:700 13px var(--tech);color:var(--ember-soft);margin-bottom:15px;letter-spacing:.1em}
-.experience-card:nth-child(2) .experience-index{color:var(--cyber-soft)}
-.experience-card h3{font:700 clamp(20px,3vw,25px)/1.5 var(--mincho);margin-bottom:13px}
-.experience-card p:not(.experience-index){font-size:16px;color:#e7e3d9;line-height:1.85}
-#welcome .welcome-cards{margin-top:34px}
-#welcome .welcome-card{padding:26px 22px}
-#welcome .welcome-card .key{font-size:clamp(19px,2.6vw,23px);margin-bottom:8px}
-#welcome .welcome-card p:not(.key){font-size:16px;line-height:1.8}
-#hosts .pair{margin-top:38px}
-#hosts .host{padding:24px clamp(20px,4vw,38px)}
-#hosts .host p:not(.role){font-size:16px;line-height:1.85}
-#hosts .host-logo{margin-bottom:14px}
-#hosts .host .mark{font-size:clamp(21px,3vw,27px);margin-bottom:10px}
-#overview .overview-board{margin-top:34px;border:1px solid var(--line);background:var(--panel);border-radius:18px;overflow:hidden}
-.overview-row{display:grid;grid-template-columns:132px 1fr;gap:16px;align-items:center;padding:17px clamp(20px,3.6vw,32px);border-bottom:1px solid var(--line);font-size:16px}
-.overview-row:last-child{border-bottom:0}
-.overview-label{font-weight:600;color:#b9c7dc;white-space:nowrap}
-.overview-row strong{font-size:clamp(16px,2.8vw,19px)}
-.overview-row.highlight{background:rgba(244,161,74,.1)}
-.overview-row.highlight strong{color:#ffca88}
-#overview .access-panel{margin-top:18px;padding:clamp(24px,3vw,32px)}
-#overview .access-panel p{font-size:16px}
-#overview .access-panel .access-sub{font-size:14px}
-#join .join-intro{text-align:center;color:#dce4f1;margin:20px auto 0;font-size:16px}
-#join .payment-routes{margin-top:32px}
-#join .payment-route ol{font-size:16px;line-height:1.85}
-#join .payment-route .route-note{font-size:14px;color:#f1c08b}
-#join .payment-route .btn{font-size:16px;white-space:normal}
-#join .join-endnote{text-align:center;color:#b9c7dc;font-size:14px;margin-top:22px}
-.rules-summary{padding:28px clamp(23px,4vw,36px);background:var(--panel);border:1px solid var(--line);border-radius:17px;margin-top:36px}
-.rules-summary p{font:700 clamp(17px,2.4vw,20px)/1.6 var(--mincho);margin-bottom:12px}
-.rules-summary ul{padding-left:1.3em;color:#dde5f2;font-size:16px;line-height:1.9}
-.rules-summary li+li{margin-top:5px}
-.faq-title{font:700 clamp(23px,4vw,29px) var(--mincho);margin:42px 0 18px}
-.faq-details{display:grid;gap:10px}
-.faq-details details{border:1px solid var(--line);border-radius:13px;background:var(--panel);padding:0 22px}
-.faq-details details[open]{border-color:rgba(124,196,255,.45)}
-.faq-details summary{cursor:pointer;padding:17px 2px;font-weight:700;font-size:16px}
-.faq-details details p{padding:0 2px 20px;color:#dce4f1;font-size:16px;line-height:1.85}
-#faq .compact-contact{text-align:center;font-size:15px;margin-top:28px}
-#faq .compact-contact a{color:var(--cyber-soft);text-underline-offset:3px}
-.cash-modal{padding:12px}
-.cash-dialog{padding:clamp(24px,4vw,32px);max-width:500px;max-height:calc(100dvh - 24px)}
-.cash-dialog h2{font-size:clamp(22px,4.4vw,27px);line-height:1.5;margin:2px 0 12px;padding-right:28px}
+#program .mystery-note{margin-top:24px;padding-top:23px;border-top:1px solid var(--line)}
+#program .mystery-note strong{color:var(--ember-soft);font-family:var(--mincho);font-size:clamp(18px,3vw,22px)}
+.reception{color:var(--ember-soft)}
+.access-brief{margin-top:24px;padding:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px}
+.access-brief h3{font:700 clamp(20px,3vw,23px) var(--mincho);margin-bottom:10px}
+.access-brief p{font-size:16px;color:#e7e3d9;line-height:1.85}
+.access-brief strong{color:var(--ember-soft)}
+.access-brief a{display:inline-block;margin-top:10px;color:var(--cyber-soft);text-underline-offset:3px}
+.cash-flow{margin-top:32px;padding:clamp(24px,4vw,34px);border:1px solid rgba(255,192,116,.45);border-radius:16px;background:var(--panel);text-align:center}
+.cash-flow h3{font:700 clamp(20px,3vw,24px) var(--mincho);margin-bottom:13px}
+.cash-flow p{font-size:16px;line-height:1.9;color:#e7e3d9;margin:0 auto 22px}
+.cash-flow strong{color:var(--ember-soft)}
+.cash-guidance{margin-top:18px;font-size:14px;color:var(--ember-soft)}
+.cash-dialog{max-width:500px;padding:clamp(24px,4vw,30px)}
+.cash-dialog h2{font-size:clamp(22px,4.4vw,27px);line-height:1.5;margin:0 0 12px}
 .cash-dialog .modal-intro{font-size:16px;line-height:1.8}
 .cash-dialog .modal-howto{text-align:center;font-weight:700;font-size:14px;margin:15px 0 12px;color:var(--ember-soft)}
-.copy-template{padding:15px 13px;font-size:15px;line-height:1.8}
-.modal-buttons{margin-top:12px;gap:9px}
-.modal-buttons .btn{padding:12px 15px;font-size:16px}
-.cash-dialog .copy-status{min-height:0;margin-top:9px;font-size:14px;line-height:1.55}
+.cash-dialog .modal-payment{font-size:13px;margin-top:9px;color:#ddd}
+.copy-template{padding:15px;font-size:15px;line-height:1.8}
 .cash-dialog .copy-status:empty{display:none}
-.cash-dialog .modal-warning{font-size:13px;font-weight:700;color:#f1bd7e;line-height:1.7;margin:9px 0 0}
-.cash-dialog .modal-payment{font-size:13px;margin-top:8px;color:#ddd}
-.cash-dialog .modal-help{font-size:13px;line-height:1.65;margin-top:11px}
 @media(max-width:720px){
- section{padding:64px 20px}
- .section-lead{font-size:16px;line-height:1.9}
  #hero{padding:0}
  #hero .hero-headline{padding:38px 16px 22px}
- #hero .hero-overline{font-size:12.5px;letter-spacing:.03em;margin-bottom:12px}
- #hero h1{font-size:clamp(31px,8vw,46px);line-height:1.4}
+ #hero .hero-overline{font-size:12.5px;margin-bottom:12px}
+ #hero h1{font-size:clamp(31px,8vw,46px)}
  #hero .hero-art{background-image:var(--hero-m);height:clamp(370px,117vw,540px);background-position:center top}
  #hero .hero-bottom{padding:12px 15px 32px}
- .hero-day{font-size:20px}
- .hero-time{font-size:16px}
- .experience-grid{grid-template-columns:1fr;gap:14px;margin-top:30px}
- .experience-card{padding:26px}
- #welcome .welcome-cards{grid-template-columns:1fr;margin-top:30px}
- #welcome .welcome-card{padding:22px 24px}
- #hosts .pair{grid-template-columns:1fr}
- #hosts .host.lambda{text-align:left}
- #hosts .host.lambda .host-logo{margin-left:0}
- .overview-row{grid-template-columns:96px 1fr;gap:12px;padding:15px 16px}
- .overview-row strong{font-size:16px}
- #join .payment-routes{grid-template-columns:1fr}
- #join .payment-route{padding:26px 22px}
- .faq-details details{padding:0 17px}
+ .hero-day{font-size:20px}.hero-time{font-size:16px}
+ .action-row{flex-direction:column;gap:13px}
+ .action-row .btn{width:100%;max-width:410px;padding:15px 18px;font-size:16px}
  .cash-dialog{padding:24px 19px}
  .copy-template{font-size:14px}
- .nav-cta{font-size:13px;padding:9px 17px;min-width:98px}
+ .access-brief{padding:24px 21px}
+ .cash-flow{padding:24px 19px}
 }
-@media(max-width:360px){
- #hero h1{font-size:29px}
- #hero .hero-art{height:114vw}
- .overview-row{grid-template-columns:79px 1fr;gap:8px}
- .overview-row strong{font-size:15px}
- .cash-dialog{padding:22px 16px}
-}
+@media(max-width:360px){#hero h1{font-size:29px}#hero .hero-art{height:114vw}}
 
 </style>
 </head>
@@ -538,135 +482,227 @@ section{padding:clamp(66px,9vw,108px) clamp(20px,5vw,40px)}
   </div>
 </section>
 
-<!-- 2: EVENT INTRO -->
+<!-- CONCEPT -->
 <section id="concept">
   <div class="wrap reveal">
-    <p class="eyebrow center">About the event</p>
-    <h2 class="section-center">ふたつの交流会が、<br>岡山城でひとつに。</h2>
-    <p class="section-lead">都市伝説や不思議な話が好きな人も、AIや未来の話に興味がある人も。<br>いつもと少し違う夜の岡山城で、好きな話を気軽に楽しむ交流会です。</p>
+    <span class="seam"></span>
+    <p class="eyebrow center">Concept</p>
+    <h2>AIや都市伝説が<br>好きな方へ。</h2>
+    <p class="lead">
+      岡山城の夜に、<br>
+      少し<em class="b">不思議</em>で少し<em>未来的</em>な<br>
+      交流会を開催します。<br><br>
+      AIをテーマにした交流コミュニティ<br>
+      「<em>レヴ</em>」と、<br>
+      都市伝説・不思議な話を楽しむ交流会<br>
+      「<em class="b">ラムダ</em>」が、<br>
+      岡山城で一夜限りの<br>
+      コラボイベントを開催します。<br><br>
+      AI、都市伝説、歴史、テクノロジー、<br>
+      これからの生き方。<br>
+      普段なかなか話せないテーマを、<br>
+      岡山城という特別な場所で<br>
+      気軽に語り合う交流会です。
+    </p>
   </div>
 </section>
 
-<!-- 3: PROGRAM -->
-<section id="program">
-  <div class="wrap reveal">
-    <p class="eyebrow center">The experience</p>
-    <h2 class="section-center">この夜の、楽しみ方。</h2>
-    <div class="experience-grid">
-      <article class="experience-card">
-        <p class="experience-index">01 / TALK</p>
-        <h3>好きな話で、つながる。</h3>
-        <p>AI、都市伝説、不思議な体験。気になる話題をきっかけに、自由に交流を楽しめます。</p>
-      </article>
-      <article class="experience-card">
-        <p class="experience-index">02 / MYSTERY</p>
-        <h3>ちょっとした、謎解きも。</h3>
-        <p>参加者同士で協力する謎解き要素をご用意。会話のきっかけとして、気軽に楽しめます。</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- 4: WELCOME -->
+<!-- WELCOME -->
 <section id="welcome">
   <div class="wrap reveal">
-    <p class="eyebrow center">Everyone is welcome</p>
-    <h2 class="section-center">ひとりでも。<br>詳しくなくても。<br>聞くだけでも。</h2>
+    <p class="eyebrow center">Welcome</p>
+    <h2>専門知識は、<br>必要ありません。</h2>
     <div class="welcome-cards">
-      <div class="welcome-card"><p class="key">ひとりでも。</p><p>お一人での参加も大歓迎です。</p></div>
-      <div class="welcome-card"><p class="key">詳しくなくても。</p><p>AIも都市伝説も、興味があれば十分です。</p></div>
-      <div class="welcome-card"><p class="key">聞くだけでも。</p><p>無理に話さず、雰囲気を楽しむだけでもOK。</p></div>
+      <div class="welcome-card">
+        <p class="key">どんな方も、<br>歓迎です。</p>
+        <p>AIに詳しい方はもちろん、最近少し気になっている方、都市伝説や不思議な話が好きな方、人と話すきっかけがほしい方も歓迎です。</p>
+      </div>
+      <div class="welcome-card">
+        <p class="key">聞くだけでも、<br>大丈夫。</p>
+        <p>「話すのが得意じゃない」という方も大丈夫。聞くだけの参加でも、雰囲気を楽しむだけでも構いません。</p>
+      </div>
+      <div class="welcome-card">
+        <p class="key">否定しない、<br>一夜に。</p>
+        <p>未来の話も、不思議な話も、否定せずに楽しめる場にしたいと思っています。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- 5: HOSTS -->
+<!-- HOSTS -->
 <section id="hosts">
   <div class="wrap reveal">
-    <p class="eyebrow center">Hosts</p>
-    <h2 class="section-center">レヴ × ラムダ</h2>
+    <p class="eyebrow">Who's hosting</p>
+    <h2>ふたつの場所が、ひとつに。</h2>
     <div class="pair">
       <div class="host lambda">
-        <div class="host-logo"><img src="images/logo-lambda.png" alt="都市伝説カフェΛのロゴ" loading="lazy"></div>
-        <p class="role">LEGENDS</p><h3 class="mark">都市伝説カフェ Λ</h3>
-        <p>都市伝説や未解明の謎、ちょっと不思議な話を楽しむ交流会。</p>
+        <div class="host-logo"><img src="images/logo-lambda.png" alt="都市伝説カフェ Λ のロゴ"></div>
+        <p class="role">Legends</p>
+        <p class="mark">都市伝説カフェ Λ</p>
+        <p class="sub">LAMBDA</p>
+        <p>都市伝説や未解明の謎、ちょっと不思議な話を、都市伝説好き同士で楽しむ交流会。本当かどうかより、興味深い話を共有する場です。</p>
       </div>
       <div class="divider-seam"></div>
       <div class="host lev">
-        <div class="host-logo"><img src="images/logo-lev.png" alt="AI Salon Levのロゴ" loading="lazy"></div>
-        <p class="role">FUTURE</p><h3 class="mark">AI Salon Lev</h3>
-        <p>AIニュースやツールを、初心者でも気軽に話せるコミュニティ。</p>
+        <div class="host-logo"><img src="images/logo-lev.png" alt="AI Salon Lev のロゴ"></div>
+        <p class="role">Future</p>
+        <p class="mark">AI Salon Lev</p>
+        <p class="sub">LEV</p>
+        <p>AIニュースやツールを、初心者でも安心して話せる岡山のコミュニティ。知識を競わず、一緒に試しながら少しずつ慣れていく場です。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6: OVERVIEW -->
+<!-- TARGET -->
+<section id="target">
+  <div class="wrap reveal">
+    <p class="eyebrow">For you</p>
+    <h2>こんな方に、おすすめ。</h2>
+    <div class="grid">
+      <div class="target-item"><span class="ic">✓</span><p>AIに興味がある方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>都市伝説や不思議な話が好きな方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>岡山で新しい交流の場を探している方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>レヴやラムダの活動が気になっている方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>普段なかなか話せないテーマを語りたい方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>聞き専でも参加できるイベントを探している方</p></div>
+      <div class="target-item"><span class="ic">✓</span><p>興味はあるけど、交流会に行ったことがない方</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="wrap reveal">
+    <p class="eyebrow">Program</p>
+    <h2>当日の、内容。</h2>
+    <div class="program-body">
+      <p class="pick">当日は、<em>AIや都市伝説</em>をテーマにしながら、参加者同士で気軽に交流できる時間を予定しています。</p>
+      <p>ビジネスライクな堅い交流会ではなく、<strong style="color:var(--moon);font-weight:700">会話を楽しむ場</strong>です。初めての方でも参加しやすい雰囲気づくりを大切にします。</p>
+      <p>また、当日は参加者同士の交流が生まれやすくなるような<strong style="color:var(--ember-soft);font-weight:600">体験型のコンテンツ</strong>も予定しています。詳細は当日のお楽しみですが、ひとりで参加する方でも自然に会話へ入りやすい内容にする予定です。</p>
+      <p class="mystery-note"><strong>岡山城に隠された、ちょっとした謎。</strong><br>参加者同士で協力して楽しむ、会話のきっかけになる謎解きもご用意しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
 <section id="overview">
   <div class="wrap reveal">
-    <p class="eyebrow center">Event details</p>
-    <h2 class="section-center">開催概要・アクセス</h2>
-    <div class="overview-board">
-      <div class="overview-row"><span class="overview-label">開催日</span><strong>2026年12月6日（日）</strong></div>
-      <div class="overview-row"><span class="overview-label">開催時間</span><strong>18:30〜20:30</strong></div>
-      <div class="overview-row highlight"><span class="overview-label">受付</span><strong>17:30〜 ／ 天守閣入口前</strong></div>
-      <div class="overview-row"><span class="overview-label">会場</span><strong>岡山城 天守閣</strong></div>
-      <div class="overview-row"><span class="overview-label">参加費</span><strong>3,000円／人</strong></div>
-      <div class="overview-row"><span class="overview-label">定員</span><strong>100名（先着順）</strong></div>
+    <p class="eyebrow">Overview</p>
+    <h2>開催概要</h2>
+    <div class="cards">
+      <div class="ov-card"><div class="ov-top"><p class="k">Date</p><span class="ov-icon"><img src="images/icon-date.png" alt=""></span></div><p class="v">2026年12月6日（日）</p><p class="s">18:30 〜 20:30<br><strong class="reception">受付開始 17:30〜</strong></p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Place</p><span class="ov-icon"><img src="images/icon-place.png" alt=""></span></div><p class="v">岡山城 天守閣</p><p class="s">岡山県岡山市北区丸の内2-3-1<br><strong class="reception">受付：天守閣入口前</strong></p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Fee</p><span class="ov-icon"><img src="images/icon-fee.png" alt=""></span></div><p class="v">3,000円</p><p class="s">Peatix事前決済／DM申し込みで当日現金払い</p></div>
+      <div class="ov-card"><div class="ov-top"><p class="k">Capacity</p><span class="ov-icon"><img src="images/icon-capacity.png" alt=""></span></div><p class="v">100名</p><p class="s">先着順・定員に達し次第しめ切り</p></div>
     </div>
-    <div class="access-panel">
-      <h3>受付は、天守閣入口前です。</h3>
-      <p><strong>17:30から受付開始。</strong>イベント開始は18:30です。入口前の受付へ、余裕を持ってお越しください。</p>
-      <p class="access-sub">岡山県岡山市北区丸の内2-3-1</p>
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B2%A1%E5%B1%B1%E5%9F%8E%20%E5%A4%A9%E5%AE%88%E9%96%A3" target="_blank" rel="noopener">Googleマップで会場を確認 →</a>
+    <div class="access-brief">
+      <h3>受付場所・アクセス</h3>
+      <p><strong>17:30〜 ／ 岡山城 天守閣入口前</strong><br>イベントは18:30開始。余裕を持ってお越しください。</p>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%B2%A1%E5%B1%B1%E5%9F%8E%20%E5%A4%A9%E5%AE%88%E9%96%A3" target="_blank" rel="noopener">Googleマップで確認 →</a>
     </div>
+    <div class="ov-cta"><a class="btn" href="#join">参加方法を見る <span class="arr">→</span></a></div>
   </div>
 </section>
 
-<!-- 7: REGISTRATION -->
-<section id="join">
+<!-- RULES -->
+<section id="rules">
   <div class="wrap reveal">
-    <p class="eyebrow center">Join us</p>
-    <h2 class="section-center">参加申し込み</h2>
-    <p class="join-intro">お申し込みは、2つの方法から選べます。</p>
-    <div class="payment-routes">
-      <div class="payment-route">
-        <p class="route-tag">事前決済</p><h3>Peatixで申し込む</h3>
-        <ol><li>Peatixでチケットを購入</li><li>当日、受付でチケットを提示</li></ol>
-        <a class="btn" href="https://lev-lambda-20261206.peatix.com" data-apply target="_blank" rel="noopener">Peatixで申し込む <span class="arr" aria-hidden="true">→</span></a>
-      </div>
-      <div class="payment-route cash">
-        <p class="route-tag">当日現金払い</p><h3>DMで申し込む</h3>
-        <ol><li>テンプレートをコピーし、DMで送信</li><li>当日、受付で<strong>現金3,000円／人</strong>をお支払い</li></ol>
-        <button class="btn secondary" type="button" data-open-cash>現金払いのDM申し込み <span class="arr" aria-hidden="true">→</span></button>
-        <p class="route-note">※ 人数把握のため、<strong>事前のDM申し込みが必須</strong>です。</p>
-      </div>
+    <p class="eyebrow">House rules</p>
+    <h2>参加にあたっての、お願い。</h2>
+    <div class="list">
+      <div class="rule"><span class="no">01</span><div>
+        <h3>相手の話を否定しない</h3>
+        <p>安心して話せる場づくりに、ご協力ください。どんな説も、まずは「面白い」から。</p></div><span class="rule-icon"><img src="images/icon-rule-01.png" alt=""></span></div>
+      <div class="rule"><span class="no">02</span><div>
+        <h3>勧誘・営業はご遠慮を</h3>
+        <p>ビジネスへの勧誘、宗教・マルチなどの営業、その他の迷惑行為はお控えください。</p></div><span class="rule-icon"><img src="images/icon-rule-02.png" alt=""></span></div>
+      <div class="rule"><span class="no">03</span><div>
+        <h3>無断の撮影・録音はNG</h3>
+        <p>本人の許可なく、他の参加者を撮影・録音することはお控えください。</p></div><span class="rule-icon"><img src="images/icon-rule-03.png" alt=""></span></div>
+      <div class="rule"><span class="no">04</span><div>
+        <h3>距離感とマナーを大切に</h3>
+        <p>お互いが気持ちよく過ごせるよう、距離感やマナーへのご配慮をお願いします。</p>
+        <span class="ps">※ 気になる行為があった際は、運営からお声がけする場合があります。</span></div><span class="rule-icon"><img src="images/icon-rule-04.png" alt=""></span></div>
     </div>
-    <p class="join-endnote">定員100名・先着順 ／ 受付17:30〜・天守閣入口前</p>
   </div>
 </section>
 
-<!-- 8: GUIDANCE / FAQ -->
+<!-- FLOW -->
+<section id="flow">
+  <div class="wrap reveal">
+    <p class="eyebrow">How to join</p>
+    <h2>Peatixでの参加は、3ステップ。</h2>
+    <div class="steps">
+      <div class="step"><div class="step-no"><span>01</span></div>
+        <h3>Peatixで申し込み</h3>
+        <p>Peatixのイベントページからチケットを購入します（事前決済）。</p></div>
+      <div class="step"><div class="step-no"><span>02</span></div>
+        <h3>チケットを受け取る</h3>
+        <p>購入後、Peatixより注文確認メールが届きます。チケットはPeatixのメール、またはPeatixアプリから確認できます。</p></div>
+      <div class="step"><div class="step-no"><span>03</span></div>
+        <h3>交流会に参加</h3>
+        <p>岡山城・天守閣でお会いしましょう。当日は、Peatixのチケット画面をご提示ください。</p></div>
+    </div>
+    <div class="cash-flow">
+      <h3>当日現金払いの方はこちら</h3>
+      <p>人数把握のため、<strong>必ず事前にInstagramのDMでお申し込みください。</strong><br>お名前と参加人数を送り、当日は17:30以降に天守閣入口前の受付で現金3,000円をお支払いください。</p>
+      <button type="button" class="btn secondary" data-open-cash>DMで申し込む <span class="arr" aria-hidden="true">→</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
 <section id="faq">
   <div class="wrap reveal">
-    <p class="eyebrow center">Before you come</p>
-    <h2 class="section-center">安心して楽しむために。</h2>
-    <div class="rules-summary">
-      <p>お互いの話を尊重し、心地よい交流の時間を。</p>
-      <ul>
-        <li>他の方の話や考えを否定せず、楽しみましょう。</li>
-        <li>営業・勧誘や迷惑行為はご遠慮ください。</li>
-        <li>撮影・録音は、相手の許可を得てからお願いします。</li>
-      </ul>
+    <p class="eyebrow">FAQ</p>
+    <h2>よくある質問。</h2>
+    <div class="faqs">
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>1人でも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>もちろんです。お一人での参加が大半なので、初めての方も気軽にお越しください。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>県外からでも参加できますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>大歓迎です。岡山城・天守閣での開催なので、旅行や観光とあわせてぜひ。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>AIも都市伝説も詳しくないのですが、大丈夫ですか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>問題ありません。「詳しくないけど興味がある」という方こそ歓迎です。聞くだけの参加でも大丈夫です。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>参加費の支払い方法は？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>Peatixでの事前決済、または当日現金払い（1名3,000円）に対応しています。現金払いの方は人数把握のため、事前にDMでの申し込みが必須です。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>キャンセル・返金はできますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>2026年11月29日（日）23:59までにご連絡いただいた場合のみ、キャンセル・返金に対応いたします。11月30日（月）以降のキャンセルは、準備・運営の都合上、返金対応はできません。なお、主催者都合でイベントが中止となった場合は返金対応を行います。<br>※Peatixの仕様上、お支払い方法や返金タイミングによっては、返金手数料が発生する場合があります。<br>当日現金払いで申し込み済みの方がキャンセルする場合も、早めにDMでご連絡ください。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>当日現金払いは、DMでの予約が必要ですか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>はい。人数把握のため必ず事前にDMでお申し込みください。「DMで申し込む」からテンプレートをコピーできます。</p></div></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q" aria-expanded="false"><span>受付はいつ、どこで行いますか？</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-in"><p>17:30から、岡山城 天守閣入口前で受付を開始します。イベントは18:30からです。</p></div></div>
+      </div>
     </div>
-    <h3 class="faq-title">よくある質問</h3>
-    <div class="faq-details">
-      <details><summary>初めて・ひとりでも参加できますか？</summary><p>もちろんです。初めての方も、お一人の方も大歓迎です。聞くだけの参加もOKです。</p></details>
-      <details><summary>当日現金払いは、予約なしでも大丈夫？</summary><p>事前のDM申し込みが必要です。上の「現金払いのDM申し込み」からテンプレートをコピーして送信してください。</p></details>
-      <details><summary>受付は何時から、どこですか？</summary><p>17:30から、岡山城の天守閣入口前で受付を開始します。イベントは18:30からです。</p></details>
-      <details><summary>キャンセル・返金はできますか？</summary><p>Peatixで事前決済した方は、11月29日（日）23:59までのご連絡でキャンセル・返金に対応します。11月30日（月）以降は原則返金できません。主催者都合で中止する場合は返金します。Peatix側の手数料が発生する場合があります。現金払いのDM申し込みをキャンセルする場合も、早めにDMでお知らせください。</p></details>
-    </div>
-    <p class="contact compact-contact">ご質問はこちら：<a href="https://www.instagram.com/hei.no.insta/" target="_blank" rel="noopener">Instagram DM</a></p>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section id="join">
+  <div class="wrap reveal">
+    <span class="seam"></span>
+    <p class="eyebrow center">Join</p>
+    <h2>AIや都市伝説好きな方、<br>ぜひお待ちしてます。</h2>
+    <div class="cta-wrap"><div class="action-row">
+      <a class="btn" href="https://lev-lambda-20261206.peatix.com" data-apply target="_blank" rel="noopener">Peatixで申し込む <span class="arr">→</span></a>
+      <button class="btn secondary" type="button" data-open-cash>当日現金払いで申し込む <span class="arr">→</span></button>
+    </div></div>
+    <p class="cash-guidance">※当日現金払いの方は、必ず事前にDMをお送りください。</p>
+    <p class="seats">定員100名・先着順</p>
+    <p class="contact">質問だけでもお気軽に：<a href="https://www.instagram.com/hei.no.insta/" target="_blank" rel="noopener">Instagram DM</a></p>
   </div>
 </section>
 
@@ -757,7 +793,7 @@ copyButton.addEventListener("click",async()=>{
       if(!success)throw new Error("copy failed");
     }
     copyButton.textContent="コピーしました！";
-    copyStatus.textContent="コピーしました！ お名前・参加人数を記入してDMで送信してください。";
+    copyStatus.textContent="お名前・参加人数を記入してDMで送信してください。";
   }catch(error){
     copyStatus.textContent="自動コピーできませんでした。上の文章を選択してコピーしてください。";
   }
